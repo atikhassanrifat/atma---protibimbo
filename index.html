@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>আত্ম প্রতিবিম্ব — দৈনিক আত্মমুহাসাবা</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap');
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:'Noto Sans Bengali',sans-serif;
+  background:#070b09;
+  color:#e8eee9;
+  line-height:1.7;
+}
+
+.container{
+  width:min(900px,94%);
+  margin:auto;
+}
+
+header{
+  padding:55px 0 35px;
+  text-align:center;
+}
+
+.logo{
+  width:75px;
+  height:75px;
+  margin:auto;
+  border:1px solid #b69b5a;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+  color:#b69b5a;
+  box-shadow:0 0 30px rgba(182,155,90,.08);
+}
+
+h1{
+  margin-top:18px;
+  font-size:34px;
+  color:#d5bc7a;
+}
+
+.subtitle{
+  color:#87958c;
+  margin-top:5px;
+}
+
+.date{
+  margin-top:15px;
+  color:#65736b;
+  font-size:14px;
+}
+
+.ayah{
+  margin:20px 0;
+  padding:28px 22px;
+  background:linear-gradient(145deg,#101914,#0b100d);
+  border:1px solid #26382e;
+  border-radius:18px;
+  text-align:center;
+}
+
+.arabic{
+  direction:rtl;
+  font-size:25px;
+  line-height:2;
+  color:#d8c58f;
+  margin-bottom:15px;
+}
+
+.translation{
+  color:#aab5ae;
+  font-size:14px;
+}
+
+.section{
+  background:#0d1410;
+  border:1px solid #1d2a23;
+  border-radius:18px;
+  padding:22px;
+  margin:18px 0;
+}
+
+.section-title{
+  color:#c8b16f;
+  font-size:20px;
+  margin-bottom:15px;
+}
+
+.prayer{
+  padding:15px 0;
+  border-bottom:1px solid #1c2821;
+}
+
+.prayer:last-child{
+  border-bottom:0;
+}
+
+.prayer-name{
+  font-weight:600;
+  margin-bottom:9px;
+}
+
+.options{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+
+button{
+  font-family:inherit;
+  cursor:pointer;
+}
+
+.option{
+  border:1px solid #2a3a31;
+  background:#111a15;
+  color:#91a098;
+  padding:7px 11px;
+  border-radius:9px;
+  font-size:13px;
+}
+
+.option.active{
+  background:#244b37;
+  color:#e7f1e9;
+  border-color:#477b5b;
+}
+
+.negative.active{
+  background:#4a2727;
+  border-color:#784747;
+}
+
+.nofol-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:10px;
+}
+
+.nofol{
+  background:#111a15;
+  border:1px solid #26372d;
+  border-radius:12px;
+  padding:13px;
+}
+
+.nofol label{
+  display:block;
+  margin-bottom:7px;
+  font-size:14px;
+}
+
+input[type="checkbox"]{
+  width:18px;
+  height:18px;
+  accent-color:#668c70;
+}
+
+.tasks label{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 0;
+  border-bottom:1px solid #19251e;
+}
+
+.tasks label:last-child{
+  border-bottom:0;
+}
+
+.progress-wrap{
+  margin-top:15px;
+}
+
+.progress{
+  height:10px;
+  background:#172019;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.progress-bar{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#466b50,#b69b5a);
+  transition:.4s;
+}
+
+.score{
+  text-align:center;
+  font-size:32px;
+  color:#d5bc7a;
+  margin:8px;
+}
+
+textarea{
+  width:100%;
+  min-height:110px;
+  resize:vertical;
+  background:#090e0b;
+  color:#dce5df;
+  border:1px solid #26372d;
+  border-radius:12px;
+  padding:13px;
+  font-family:inherit;
+  outline:none;
+}
+
+textarea:focus{
+  border-color:#52735d;
+}
+
+.compare{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.compare-box{
+  background:#101811;
+  border:1px solid #25362c;
+  padding:18px;
+  border-radius:14px;
+  text-align:center;
+}
+
+.compare-number{
+  font-size:28px;
+  color:#d5bc7a;
+}
+
+.save{
+  width:100%;
+  border:0;
+  border-radius:13px;
+  padding:14px;
+  background:#31583e;
+  color:white;
+  font-size:16px;
+  margin-top:12px;
+}
+
+.reset{
+  width:100%;
+  border:1px solid #452727;
+  border-radius:13px;
+  padding:11px;
+  background:#17100f;
+  color:#bd8989;
+  font-size:14px;
+  margin-top:8px;
+}
+
+footer{
+  text-align:center;
+  padding:40px 0 55px;
+  color:#59665f;
+  font-size:13px;
+}
+
+.quote{
+  color:#8d9a92;
+  font-style:italic;
+  margin-top:8px;
+}
+
+@media(max-width:500px){
+  h1{font-size:28px}
+  .arabic{font-size:21px}
+  .section{padding:17px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+  <div class="logo">م</div>
+  <h1>আত্ম প্রতিবিম্ব</h1>
+  <div class="subtitle">আজ নিজের অন্তরের সামনে দাঁড়ানোর দিন।</div>
+  <div class="date" id="today"></div>
+</header>
+
+<section class="ayah">
+  <div class="arabic">
+    يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَلْتَنظُرْ نَفْسٌ مَّا قَدَّمَتْ لِغَدٍ ۖ وَاتَّقُوا اللَّهَ ۚ إِنَّ اللَّهَ خَبِيرٌ بِمَا تَعْمَلُونَ
+  </div>
+
+  <div class="translation">
+    “হে মুমিনগণ! তোমরা আল্লাহকে ভয় করো এবং প্রত্যেক ব্যক্তি যেন লক্ষ্য করে সে আগামীকালের জন্য কী পাঠিয়েছে।”
+    <br>
+    — সূরা আল
