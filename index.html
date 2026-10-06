@@ -2,11 +2,13 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#07100c">
+
 <title>আত্মপ্রতিবিম্ব — আয়নায় উন্মোচিত অন্তর</title>
 
 <style>
+
 *{
   box-sizing:border-box;
   margin:0;
@@ -17,11 +19,13 @@ body{
   background:#07100c;
   color:#e8f0eb;
   font-family:Arial,sans-serif;
-  min-height:100vh;
   font-size:18px;
+  min-height:100vh;
 }
 
-button,input,textarea{
+button,
+input,
+textarea{
   font:inherit;
 }
 
@@ -30,12 +34,12 @@ button{
 }
 
 .site-header{
-  padding:18px;
+  padding:18px 16px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  border-bottom:1px solid #20352a;
   background:#09150f;
+  border-bottom:1px solid #294433;
 }
 
 .brand{
@@ -45,28 +49,28 @@ button{
 }
 
 .brand-icon{
-  font-size:32px;
+  font-size:34px;
 }
 
 .brand-text h1{
-  font-size:22px;
-  color:#dcefe2;
+  font-size:24px;
+  color:#e5f2e8;
 }
 
 .brand-text p{
-  margin-top:4px;
-  font-size:12px;
+  margin-top:5px;
   color:#91a99a;
+  font-size:14px;
 }
 
 .profile-btn{
-  width:42px;
-  height:42px;
+  width:44px;
+  height:44px;
   border:1px solid #31523e;
   border-radius:50%;
   background:#102118;
   color:#e8f0eb;
-  font-size:20px;
+  font-size:21px;
 }
 
 main{
@@ -74,6 +78,7 @@ main{
   max-width:900px;
   margin:auto;
   padding:18px;
+  padding-bottom:100px;
 }
 
 .page-section{
@@ -88,69 +93,81 @@ main{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  margin:10px 0 18px;
+  margin:10px 0 20px;
 }
 
 .eyebrow{
   display:block;
   color:#8eb49b;
-  font-size:13px;
-  margin-bottom:5px;
+  font-size:15px;
+  margin-bottom:6px;
 }
 
 .section-heading h2{
-  font-size:25px;
+  font-size:28px;
   color:#edf7f0;
 }
 
 .date-badge{
-  padding:8px 12px;
+  padding:9px 12px;
   border:1px solid #31523e;
   border-radius:12px;
   background:#102118;
   color:#b7d0be;
-  font-size:12px;
+  font-size:14px;
 }
 
 .welcome-card{
   display:flex;
-  gap:14px;
+  gap:15px;
   align-items:center;
-  padding:18px;
-  margin-bottom:16px;
+  padding:20px;
+  margin-bottom:18px;
   border:1px solid #284533;
   border-radius:18px;
   background:linear-gradient(135deg,#102218,#0b1710);
 }
 
 .welcome-icon{
-  font-size:34px;
+  font-size:38px;
 }
 
 .welcome-card h3{
-  margin-bottom:7px;
-  font-size:18px;
+  margin-bottom:8px;
+  font-size:20px;
 }
 
 .welcome-card p{
   color:#a9b9ae;
-  line-height:1.7;
-  font-size:14px;
+  line-height:1.8;
+  font-size:16px;
 }
 
 .card{
-  padding:18px;
-  margin-bottom:16px;
+  padding:19px;
+  margin-bottom:17px;
   border:1px solid #263f30;
   border-radius:18px;
   background:#0d1a12;
 }
 
 .card-label{
-  margin-bottom:12px;
+  margin-bottom:13px;
   color:#9fc2a9;
-  font-size:13px;
+  font-size:15px;
   font-weight:bold;
+}
+
+.card h3{
+  margin:15px 0 8px;
+  color:#cfe2d4;
+  font-size:17px;
+}
+
+.card p{
+  color:#aabbb0;
+  line-height:1.9;
+  font-size:16px;
 }
 
 .ayah-card{
@@ -159,57 +176,46 @@ main{
 
 .ayah-surah{
   color:#dcefe2;
-  font-size:18px;
+  font-size:20px;
   font-weight:bold;
 }
 
 .ayah-ref{
-  margin-top:4px;
+  margin-top:5px;
   color:#789683;
-  font-size:12px;
+  font-size:14px;
 }
 
 .arabic{
-  margin:22px 0;
+  margin:23px 0;
   color:#f0f5f1;
-  font-size:24px;
-  line-height:2;
+  font-size:27px;
+  line-height:2.1;
   text-align:right;
 }
 
 .divider{
   height:1px;
   background:#263f30;
-  margin:15px 0;
-}
-
-.card h3{
-  margin:14px 0 7px;
-  color:#cfe2d4;
-  font-size:15px;
-}
-
-.card p{
-  color:#aabbb0;
-  line-height:1.8;
-  font-size:14px;
+  margin:17px 0;
 }
 
 .question-text{
   color:#dcefe2 !important;
-  font-size:16px !important;
+  font-size:18px !important;
 }
 
 .text-input{
   width:100%;
-  margin-top:12px;
-  padding:13px;
+  margin-top:13px;
+  padding:14px;
   border:1px solid #2b4936;
   border-radius:12px;
   outline:none;
   resize:vertical;
   background:#08130d;
   color:#e8f0eb;
+  font-size:17px;
 }
 
 .text-input:focus{
@@ -218,8 +224,8 @@ main{
 
 .primary-btn{
   width:100%;
-  margin-top:14px;
-  padding:14px;
+  margin-top:15px;
+  padding:15px;
   border:0;
   border-radius:13px;
   background:#315c3d;
@@ -234,24 +240,26 @@ main{
 .amal-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:10px;
+  gap:11px;
 }
 
 .check-card{
   display:flex;
   align-items:center;
-  gap:9px;
-  padding:13px;
+  gap:10px;
+  padding:14px;
   border:1px solid #294533;
   border-radius:13px;
   background:#0a160f;
   color:#c7d8cc;
-  font-size:13px;
+  font-size:16px;
 }
 
 .check-card input,
 .challenge-check input{
   accent-color:#6f9b79;
+  width:18px;
+  height:18px;
 }
 
 .challenge-card{
@@ -262,18 +270,18 @@ main{
 .challenge-check{
   display:flex;
   align-items:center;
-  gap:9px;
-  margin-top:15px;
+  gap:10px;
+  margin-top:16px;
   color:#c9d8cd;
-  font-size:13px;
+  font-size:16px;
 }
 
 .night-card{
-  margin-bottom:90px;
+  margin-bottom:25px;
 }
 
 .muted-text{
-  color:#718579 !important;
+  color:#829589 !important;
 }
 
 .bottom-nav{
@@ -285,7 +293,7 @@ main{
   max-width:900px;
   display:grid;
   grid-template-columns:repeat(5,1fr);
-  padding:8px 5px;
+  padding:9px 5px;
   border-top:1px solid #263f30;
   background:#08120d;
   z-index:50;
@@ -295,22 +303,54 @@ main{
   border:0;
   background:none;
   color:#718579;
-  padding:7px 2px;
+  padding:8px 2px;
 }
 
 .nav-item span{
   display:block;
-  font-size:19px;
+  font-size:21px;
 }
 
 .nav-item small{
   display:block;
-  margin-top:3px;
-  font-size:10px;
+  margin-top:4px;
+  font-size:12px;
 }
 
 .nav-item.active{
   color:#d5eadb;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:11px;
+}
+
+.feature-btn{
+  padding:16px 12px;
+  border:1px solid #294533;
+  border-radius:14px;
+  background:#0d1a12;
+  color:#cfe2d4;
+  text-align:left;
+}
+
+.feature-btn strong{
+  display:block;
+  margin-bottom:6px;
+  font-size:16px;
+}
+
+.feature-btn span{
+  color:#829589;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.feature-btn:active{
+  transform:scale(.98);
+  background:#122319;
 }
 
 .modal{
@@ -339,37 +379,38 @@ main{
 }
 
 .modal-box h2{
-  margin-bottom:16px;
+  margin-bottom:17px;
   color:#e4f1e7;
+  font-size:22px;
 }
 
 .close-btn{
   float:right;
-  width:34px;
-  height:34px;
+  width:36px;
+  height:36px;
   border:0;
   border-radius:50%;
   background:#18271d;
   color:#dcefe2;
-  font-size:18px;
+  font-size:20px;
 }
 
 .form-group{
-  margin-bottom:13px;
+  margin-bottom:15px;
 }
 
 .form-group label{
   display:block;
-  margin-bottom:6px;
+  margin-bottom:7px;
   color:#9eb5a4;
-  font-size:12px;
+  font-size:14px;
 }
 
 .form-group input,
 .form-group textarea,
 .search-box input{
   width:100%;
-  padding:12px;
+  padding:13px;
   border:1px solid #294533;
   border-radius:11px;
   outline:none;
@@ -380,9 +421,9 @@ main{
 .search-box{
   display:flex;
   align-items:center;
-  gap:8px;
-  margin-bottom:16px;
-  padding:10px 12px;
+  gap:9px;
+  margin-bottom:17px;
+  padding:11px 13px;
   border:1px solid #294533;
   border-radius:13px;
   background:#0c1911;
@@ -390,16 +431,16 @@ main{
 
 .search-box input{
   border:0;
-  padding:3px;
+  padding:4px;
 }
 
 .ayah-list{
   display:grid;
-  gap:12px;
+  gap:13px;
 }
 
 .ayah-item{
-  padding:16px;
+  padding:17px;
   border:1px solid #263f30;
   border-radius:16px;
   background:#0d1a12;
@@ -407,61 +448,36 @@ main{
 
 .ayah-item h3{
   color:#dcefe2;
-  font-size:16px;
-  margin-bottom:5px;
+  font-size:18px;
+  margin-bottom:6px;
 }
 
 .ayah-item small{
   color:#718b7a;
-}
-
-.ayah-item p{
-  margin-top:9px;
-  color:#a9baae;
-  line-height:1.7;
   font-size:13px;
 }
 
+.ayah-item p{
+  margin-top:10px;
+  color:#a9baae;
+  line-height:1.8;
+  font-size:15px;
+}
+
 .icon-btn{
-  width:40px;
-  height:40px;
+  width:42px;
+  height:42px;
   border:1px solid #31523e;
   border-radius:12px;
   background:#102118;
   color:#dcefe2;
-  font-size:22px;
+  font-size:23px;
 }
 
 .empty-state{
-  padding:30px 15px;
+  padding:32px 15px;
   text-align:center;
   color:#718579;
-}
-
-.feature-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-}
-
-.feature-btn{
-  padding:15px 10px;
-  border:1px solid #294533;
-  border-radius:14px;
-  background:#0d1a12;
-  color:#cfe2d4;
-  text-align:left;
-}
-
-.feature-btn strong{
-  display:block;
-  margin-bottom:5px;
-  font-size:14px;
-}
-
-.feature-btn span{
-  color:#718579;
-  font-size:11px;
 }
 
 .profile-info{
@@ -470,31 +486,34 @@ main{
 }
 
 .profile-avatar{
-  width:80px;
-  height:80px;
-  margin:0 auto 12px;
+  width:85px;
+  height:85px;
+  margin:0 auto 13px;
   display:flex;
   align-items:center;
   justify-content:center;
   border:1px solid #31523e;
   border-radius:50%;
   background:#102118;
-  font-size:40px;
+  font-size:42px;
 }
 
 .profile-info h3{
-  margin:5px 0;
+  margin:6px 0;
   color:#e4f1e7;
+  font-size:21px;
 }
 
 .profile-info p{
   color:#829889;
-  font-size:13px;
+  font-size:15px;
 }
 
 @media(max-width:600px){
+
   main{
     padding:14px;
+    padding-bottom:100px;
   }
 
   .site-header{
@@ -502,19 +521,27 @@ main{
   }
 
   .brand-text h1{
-    font-size:20px;
-  }
-
-  .section-heading h2{
     font-size:22px;
   }
 
+  .brand-text p{
+    font-size:13px;
+  }
+
+  .section-heading h2{
+    font-size:25px;
+  }
+
   .welcome-card{
-    padding:15px;
+    padding:16px;
+  }
+
+  .welcome-icon{
+    font-size:32px;
   }
 
   .arabic{
-    font-size:21px;
+    font-size:23px;
   }
 
   .feature-grid{
@@ -528,17 +555,11 @@ main{
   .bottom-nav{
     padding-bottom:10px;
   }
+
 }
 
-@media(min-width:601px){
-  .bottom-nav{
-    border-radius:18px 18px 0 0;
-  }
-}
-</style>
-</head>
-
-<body>
+  </style>
+  <body>
 
 <header class="site-header">
 
@@ -559,10 +580,11 @@ main{
 
 <main id="mainContent">
 
+<!-- ==================== আজ ==================== -->
+
 <section id="today" class="page-section active">
 
   <div class="section-heading">
-
     <div>
       <span class="eyebrow">আজ</span>
       <h2>আজকের দিন</h2>
@@ -571,7 +593,6 @@ main{
     <div id="todayDate" class="date-badge">
       আজ
     </div>
-
   </div>
 
   <div class="welcome-card">
@@ -627,7 +648,8 @@ main{
     <h3>শিক্ষা</h3>
 
     <p id="todayAyahLesson">
-      সময়কে অবহেলা না করে ঈমান ও সৎকর্মের মাধ্যমে প্রতিটি দিনকে অর্থবহ করা।
+      সময়কে অবহেলা না করে ঈমান ও সৎকর্মের মাধ্যমে
+      প্রতিটি দিনকে অর্থবহ করা।
     </p>
 
   </div>
@@ -749,41 +771,18 @@ main{
 
 </section>
 
-<nav class="bottom-nav">
 
-  <button class="nav-item active" onclick="openSection('today')">
-    <span>🏠</span>
-    <small>আজ</small>
-  </button>
+<!-- ==================== মুহাসাবা ==================== -->
 
-  <button class="nav-item" onclick="openSection('muhasaba')">
-    <span>🪞</span>
-    <small>মুহাসাবা</small>
-  </button>
-
-  <button class="nav-item" onclick="openSection('ayah')">
-    <span>📖</span>
-    <small>আয়াত</small>
-  </button>
-
-  <button class="nav-item" onclick="openSection('days')">
-    <span>📚</span>
-    <small>আমার দিনগুলো</small>
-  </button>
-
-  <button class="nav-item" onclick="openSection('path')">
-    <span>👤</span>
-    <small>আমার পথ</small>
-  </button>
-
-  </nav>
-  <section id="muhasaba" class="page-section">
+<section id="muhasaba" class="page-section">
 
   <div class="section-heading">
+
     <div>
       <span class="eyebrow">নিজের হিসাব</span>
       <h2>মুহাসাবা</h2>
     </div>
+
   </div>
 
   <div class="welcome-card">
@@ -791,6 +790,7 @@ main{
     <div class="welcome-icon">🪞</div>
 
     <div>
+
       <h3>নিজের সামনে নিজেকে দাঁড় করাও</h3>
 
       <p>
@@ -798,9 +798,11 @@ main{
         নিজের অন্তর, আমল, সময় ও আচরণের
         হিসাব নাও।
       </p>
+
     </div>
 
   </div>
+
 
   <div class="card">
 
@@ -810,22 +812,22 @@ main{
 
     <div class="feature-grid">
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('নামাজের হিসাব')">
         <strong>🕌 নামাজের হিসাব</strong>
         <span>আজকের পাঁচ ওয়াক্ত</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('জামাআতের হিসাব')">
         <strong>🤲 জামাআতের হিসাব</strong>
         <span>কত ওয়াক্ত জামাআতে</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('কাযা নামাজ')">
         <strong>⏳ কাযা নামাজ</strong>
         <span>বাদ পড়া নামাজের হিসাব</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('তাহাজ্জুদ')">
         <strong>🌙 তাহাজ্জুদ</strong>
         <span>রাতের ইবাদতের হিসাব</span>
       </button>
@@ -833,6 +835,7 @@ main{
     </div>
 
   </div>
+
 
   <div class="card">
 
@@ -842,17 +845,17 @@ main{
 
     <div class="feature-grid">
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('কুরআন')">
         <strong>📖 কুরআন</strong>
         <span>আজ কতটুকু পড়েছি</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('যিকির')">
         <strong>📿 যিকির</strong>
         <span>আজকের যিকিরের হিসাব</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('দোয়া')">
         <strong>🤲 দোয়া</strong>
         <span>আজকের দোয়ার হিসাব</span>
       </button>
@@ -860,6 +863,7 @@ main{
     </div>
 
   </div>
+
 
   <div class="card">
 
@@ -869,22 +873,22 @@ main{
 
     <div class="feature-grid">
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('নফসের হিসাব')">
         <strong>🪞 নফসের হিসাব</strong>
         <span>আজ নফসকে কোথায় অনুসরণ করেছি</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('ঈমানের অবস্থা')">
         <strong>💚 ঈমানের অবস্থা</strong>
         <span>আজ ঈমান কেমন ছিল</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('নিয়তের হিসাব')">
         <strong>🎯 নিয়তের হিসাব</strong>
         <span>কাজের পেছনের উদ্দেশ্য</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('ভুল ও গুনাহ')">
         <strong>⚠️ ভুল ও গুনাহ</strong>
         <span>আজকের ভুলগুলো লিখে রাখো</span>
       </button>
@@ -892,6 +896,7 @@ main{
     </div>
 
   </div>
+
 
   <div class="card">
 
@@ -901,17 +906,17 @@ main{
 
     <div class="feature-grid">
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('তওবা ও প্রত্যাবর্তন')">
         <strong>↩️ তওবা ও প্রত্যাবর্তন</strong>
         <span>ভুল থেকে ফিরে আসার হিসাব</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('শোকর')">
         <strong>🌿 শোকর</strong>
         <span>আজ কোন নিয়ামতের জন্য কৃতজ্ঞ</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('সবর')">
         <strong>🪨 সবর</strong>
         <span>আজ কোথায় ধৈর্য ধরেছি</span>
       </button>
@@ -919,6 +924,7 @@ main{
     </div>
 
   </div>
+
 
   <div class="card">
 
@@ -928,22 +934,22 @@ main{
 
     <div class="feature-grid">
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('ফোন ব্যবহার')">
         <strong>📱 ফোন ব্যবহার</strong>
         <span>আজ কতক্ষণ ফোনে ছিলে</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('Screen Time')">
         <strong>⏱️ Screen Time</strong>
         <span>অ্যাপভিত্তিক সময়ের হিসাব</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('ঘুম ও জাগরণ')">
         <strong>🌅 ঘুম ও জাগরণ</strong>
         <span>ঘুম ও ওঠার সময়</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('পড়াশোনা')">
         <strong>📚 পড়াশোনা</strong>
         <span>আজকের পড়াশোনার সময়</span>
       </button>
@@ -951,6 +957,7 @@ main{
     </div>
 
   </div>
+
 
   <div class="card">
 
@@ -960,12 +967,12 @@ main{
 
     <div class="feature-grid">
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('পুনরাবৃত্ত ভুল')">
         <strong>🔁 পুনরাবৃত্ত ভুল</strong>
         <span>যে ভুল বারবার ফিরে আসে</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('শেখা বিষয়')">
         <strong>💡 শেখা বিষয়</strong>
         <span>আজ কী শিখলাম</span>
       </button>
@@ -973,6 +980,7 @@ main{
     </div>
 
   </div>
+
 
   <div class="card">
 
@@ -982,32 +990,32 @@ main{
 
     <div class="feature-grid">
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('লক্ষ্য')">
         <strong>🎯 লক্ষ্য</strong>
         <span>আজ ও ভবিষ্যতের লক্ষ্য</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('অঙ্গীকার')">
         <strong>🤝 অঙ্গীকার</strong>
         <span>নিজের কাছে দেওয়া কথা</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('নিজের কাছে প্রতিশ্রুতি')">
         <strong>✍️ নিজের কাছে প্রতিশ্রুতি</strong>
         <span>নিজেকে দেওয়া প্রতিজ্ঞা</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('অগ্রগতি')">
         <strong>📈 অগ্রগতি</strong>
         <span>কতটা এগিয়েছো</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('ধারাবাহিকতা')">
         <strong>🔗 ধারাবাহিকতা</strong>
         <span>কতদিন ধরে নিয়মিত আছো</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('Nafs Challenge')">
         <strong>🔥 Nafs Challenge</strong>
         <span>নফসের বিরুদ্ধে আজকের লড়াই</span>
       </button>
@@ -1015,6 +1023,7 @@ main{
     </div>
 
   </div>
+
 
   <div class="card">
 
@@ -1024,37 +1033,37 @@ main{
 
     <div class="feature-grid">
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('চরিত্র')">
         <strong>🌱 চরিত্র</strong>
         <span>আজ আমার আচরণ কেমন ছিল</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('কথাবার্তা')">
         <strong>🗣️ কথাবার্তা</strong>
         <span>আমার কথা কাউকে কষ্ট দিয়েছে কি না</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('রাগ নিয়ন্ত্রণ')">
         <strong>😤 রাগ নিয়ন্ত্রণ</strong>
         <span>রাগের সময় নিজেকে কতটা সামলেছি</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('দৃষ্টি সংযম')">
         <strong>👁️ দৃষ্টি সংযম</strong>
         <span>চোখ ও অন্তরকে কতটা সংযত রেখেছি</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('সম্পর্ক')">
         <strong>🤝 সম্পর্ক</strong>
         <span>পরিবার, বন্ধু ও অন্যদের সঙ্গে আচরণ</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('অন্যকে সাহায্য')">
         <strong>❤️ অন্যকে সাহায্য</strong>
         <span>আজ কারও উপকার করতে পেরেছি কি না</span>
       </button>
 
-      <button class="feature-btn">
+      <button class="feature-btn" onclick="focusMuhasaba('সামগ্রিক হিসাব')">
         <strong>📋 সামগ্রিক হিসাব</strong>
         <span>আজকের পুরো দিনের মূল্যায়ন</span>
       </button>
@@ -1063,23 +1072,23 @@ main{
 
   </div>
 
+
   <div class="card">
 
     <div class="card-label">
       🪞 আজকের মুহাসাবা
     </div>
 
-    <p>
+    <p id="muhasabaPrompt">
       আজ আমি আল্লাহর জন্য কী করেছি?
       কোথায় নিজের নফসের কাছে হেরে গেছি?
-      আর আগামীকাল কোন একটি বিষয়
-      আরও ভালো করার চেষ্টা করব?
+      আর আগামীকাল কোন একটি বিষয় আরও ভালো করার চেষ্টা করব?
     </p>
 
     <textarea
       id="muhasabaText"
       class="text-input"
-      rows="6"
+      rows="7"
       placeholder="আজকের মুহাসাবা এখানে লিখো..."
     ></textarea>
 
@@ -1087,10 +1096,15 @@ main{
       💾 মুহাসাবা সংরক্ষণ
     </button>
 
+    <p id="muhasabaStatus" class="muted-text" style="margin-top:12px;">
+    </p>
+
   </div>
 
 </section>
 
+
+<!-- ==================== আয়াত ==================== -->
 
 <section id="ayah" class="page-section">
 
@@ -1123,28 +1137,10 @@ main{
   <div class="card">
 
     <div class="card-label">
-      📖 আজকের কুরআনের আলো
+      📖 সংরক্ষিত আয়াত
     </div>
 
-    <div id="ayahList" class="ayah-list">
-
-      <div class="ayah-item">
-
-        <h3 id="defaultAyahSurah">
-          সূরা আল-আসর
-        </h3>
-
-        <small id="defaultAyahRef">
-          ১০৩ : ১–৩
-        </small>
-
-        <p id="defaultAyahText">
-          সময়ের শপথ। নিশ্চয় মানুষ ক্ষতির মধ্যে রয়েছে।
-        </p>
-
-      </div>
-
-    </div>
+    <div id="ayahList" class="ayah-list"></div>
 
   </div>
 
@@ -1164,176 +1160,51 @@ main{
 
   </div>
 
-  <div id="addAyahModal" class="modal">
-
-    <div class="modal-box">
-
-      <button
-        class="close-btn"
-        onclick="closeModal('addAyahModal')"
-      >
-        ×
-      </button>
-
-      <h2>
-        নতুন আয়াত যোগ করো
-      </h2>
-
-      <div class="form-group">
-
-        <label>দিন নম্বর</label>
-
-        <input
-          type="number"
-          id="ayahDay"
-          placeholder="যেমন: ১"
-          min="1"
-          max="365"
-        >
-
-      </div>
-
-      <div class="form-group">
-
-        <label>সূরার নাম</label>
-
-        <input
-          type="text"
-          id="ayahSurah"
-          placeholder="যেমন: সূরা আল-আসর"
-        >
-
-      </div>
-
-      <div class="form-group">
-
-        <label>আয়াত নম্বর</label>
-
-        <input
-          type="text"
-          id="ayahRef"
-          placeholder="যেমন: ১০৩ : ১–৩"
-        >
-
-      </div>
-
-      <div class="form-group">
-
-        <label>আরবি আয়াত</label>
-
-        <textarea
-          id="ayahArabic"
-          rows="3"
-          placeholder="এখানে আরবি আয়াত লিখো..."
-        ></textarea>
-
-      </div>
-
-      <div class="form-group">
-
-        <label>অর্থ</label>
-
-        <textarea
-          id="ayahMeaning"
-          rows="3"
-          placeholder="আয়াতের অর্থ লিখো..."
-        ></textarea>
-
-      </div>
-
-      <div class="form-group">
-
-        <label>ব্যাখ্যা</label>
-
-        <textarea
-          id="ayahExplanation"
-          rows="4"
-          placeholder="সংক্ষিপ্ত ব্যাখ্যা লিখো..."
-        ></textarea>
-
-      </div>
-
-      <div class="form-group">
-
-        <label>শিক্ষা</label>
-
-        <textarea
-          id="ayahLesson"
-          rows="3"
-          placeholder="এই আয়াত থেকে কী শিক্ষা?"
-        ></textarea>
-
-      </div>
-
-      <button
-        class="primary-btn"
-        onclick="saveAyah()"
-      >
-        💾 আয়াত সংরক্ষণ
-      </button>
-
-    </div>
-
-  </div>
-
 </section>
 
+
+<!-- ==================== আমার দিনগুলো ==================== -->
 
 <section id="days" class="page-section">
 
   <div class="section-heading">
 
     <div>
-      <span class="eyebrow">আমার পথচলা</span>
+      <span class="eyebrow">পেছনে ফিরে দেখা</span>
       <h2>আমার দিনগুলো</h2>
     </div>
 
   </div>
 
-  <div class="card">
-
-    <div class="card-label">
-      📚 সংরক্ষিত দিন
-    </div>
-
-    <div id="savedDays" class="ayah-list">
-
-      <div class="empty-state">
-        এখনো কোনো দিনের হিসাব সংরক্ষণ করা হয়নি।
-      </div>
-
-    </div>
-
-  </div>
+  <div id="savedDaysList"></div>
 
 </section>
 
+
+<!-- ==================== আমার পথ ==================== -->
 
 <section id="path" class="page-section">
 
   <div class="section-heading">
 
     <div>
-      <span class="eyebrow">আমার পরিচয়</span>
+      <span class="eyebrow">আমার উদ্দেশ্য</span>
       <h2>আমার পথ</h2>
     </div>
 
   </div>
 
-  <div class="card">
+  <div class="welcome-card">
 
-    <div class="profile-info">
+    <div class="welcome-icon">🧭</div>
 
-      <div class="profile-avatar">
-        🪞
-      </div>
-
-      <h3>আত্মপ্রতিবিম্ব</h3>
+    <div>
+      <h3>আমি কোথায় যেতে চাই?</h3>
 
       <p>
-        আয়নায় উন্মোচিত অন্তর
+        পথের গন্তব্য পরিষ্কার না থাকলে
+        হাঁটার গতি কোনো কাজে আসে না।
       </p>
-
     </div>
 
   </div>
@@ -1341,43 +1212,43 @@ main{
   <div class="card">
 
     <div class="card-label">
-      🌱 আমার উদ্দেশ্য
+      🎯 আমার লক্ষ্য
     </div>
 
-    <p>
-      নিজেকে অন্যের সঙ্গে নয়,
-      গতকালের নিজের সঙ্গে তুলনা করা।
-      ভুলকে লুকানো নয়—চেনা,
-      স্বীকার করা এবং আল্লাহর দিকে
-      ফিরে আসার চেষ্টা করা।
-    </p>
+    <textarea
+      id="pathGoal"
+      class="text-input"
+      rows="5"
+      placeholder="আমি নিজেকে কোথায় দেখতে চাই..."
+    ></textarea>
 
   </div>
 
   <div class="card">
 
     <div class="card-label">
-      🎯 আমার অঙ্গীকার
+      🤲 আমার অঙ্গীকার
     </div>
 
     <textarea
       id="pathPromise"
       class="text-input"
       rows="5"
-      placeholder="নিজের কাছে তোমার অঙ্গীকার লিখো..."
+      placeholder="নিজের কাছে আমার অঙ্গীকার..."
     ></textarea>
 
-    <button
-      class="primary-btn"
-      onclick="savePathPromise()"
-    >
-      💾 অঙ্গীকার সংরক্ষণ
+    <button class="primary-btn" onclick="savePathPromise()">
+      💾 আমার পথ সংরক্ষণ
     </button>
+
+    <p id="pathStatus" class="muted-text" style="margin-top:12px;"></p>
 
   </div>
 
 </section>
 
+
+<!-- ==================== প্রোফাইল ==================== -->
 
 <section id="profile" class="page-section">
 
@@ -1398,7 +1269,7 @@ main{
         🪞
       </div>
 
-      <h3 id="profileNameDisplay">
+      <h3 id="profileName">
         আত্মপ্রতিবিম্ব
       </h3>
 
@@ -1416,102 +1287,247 @@ main{
 
       <input
         type="text"
-        id="profileName"
+        id="profileNameInput"
         placeholder="তোমার নাম লিখো..."
       >
 
     </div>
 
-    <button
-      class="primary-btn"
-      onclick="saveProfile()"
-    >
+    <button class="primary-btn" onclick="saveProfile()">
       💾 প্রোফাইল সংরক্ষণ
     </button>
 
   </div>
 
-  </section>
-  
-  <script>
+</section>
 
-const ayahs = [
+
+<!-- ==================== নিচের Navigation ==================== -->
+
+<nav class="bottom-nav">
+
+  <button class="nav-item active" onclick="openSection('today')">
+    <span>🏠</span>
+    <small>আজ</small>
+  </button>
+
+  <button class="nav-item" onclick="openSection('muhasaba')">
+    <span>🪞</span>
+    <small>মুহাসাবা</small>
+  </button>
+
+  <button class="nav-item" onclick="openSection('ayah')">
+    <span>📖</span>
+    <small>আয়াত</small>
+  </button>
+
+  <button class="nav-item" onclick="openSection('days')">
+    <span>📚</span>
+    <small>আমার দিনগুলো</small>
+  </button>
+
+  <button class="nav-item" onclick="openSection('path')">
+    <span>👤</span>
+    <small>আমার পথ</small>
+  </button>
+
+        </nav>
+  <!-- ==================== AYAH MODAL ==================== -->
+
+<div id="addAyahModal" class="modal">
+
+  <div class="modal-box">
+
+    <button
+      class="close-btn"
+      onclick="closeModal('addAyahModal')"
+    >
+      ×
+    </button>
+
+    <h2>নতুন আয়াত যোগ করো</h2>
+
+    <div class="form-group">
+
+      <label>দিন নম্বর</label>
+
+      <input
+        type="number"
+        id="ayahDay"
+        min="1"
+        max="365"
+        placeholder="যেমন: ১"
+      >
+
+    </div>
+
+    <div class="form-group">
+
+      <label>সূরা</label>
+
+      <input
+        type="text"
+        id="ayahSurah"
+        placeholder="যেমন: সূরা আল-আসর"
+      >
+
+    </div>
+
+    <div class="form-group">
+
+      <label>আয়াত নম্বর</label>
+
+      <input
+        type="text"
+        id="ayahRef"
+        placeholder="যেমন: ১০৩ : ১–৩"
+      >
+
+    </div>
+
+    <div class="form-group">
+
+      <label>আয়াত / অর্থ</label>
+
+      <textarea
+        id="ayahText"
+        rows="4"
+        placeholder="আয়াতের অর্থ বা লেখা..."
+      ></textarea>
+
+    </div>
+
+    <div class="form-group">
+
+      <label>ব্যাখ্যা</label>
+
+      <textarea
+        id="ayahExplanation"
+        rows="4"
+        placeholder="সংক্ষিপ্ত ব্যাখ্যা..."
+      ></textarea>
+
+    </div>
+
+    <button
+      class="primary-btn"
+      onclick="saveAyah()"
+    >
+      💾 আয়াত সংরক্ষণ
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- ==================== SCRIPT ==================== -->
+
+<script>
+
+const defaultAyahs = [
+
   {
     day:1,
     surah:"সূরা আল-আসর",
     ref:"১০৩ : ১–৩",
-    arabic:"وَالْعَصْرِ ۝ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ ۝ إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ",
-    meaning:"সময়ের শপথ। নিশ্চয় মানুষ ক্ষতির মধ্যে রয়েছে। তবে তারা নয়, যারা ঈমান এনেছে, সৎকর্ম করেছে এবং পরস্পরকে সত্য ও ধৈর্যের উপদেশ দিয়েছে।",
-    explanation:"সময় চলে গেলে তা আর ফিরে আসে না। তাই ঈমান, সৎকর্ম, সত্যের পথে থাকা এবং ধৈর্য ধারণের মাধ্যমে সময়কে মূল্যবান করে তুলতে হবে।",
-    lesson:"আজকের সময়কে অবহেলা না করে আল্লাহর সন্তুষ্টির জন্য ব্যবহার করা।"
+    text:"সময়ের শপথ। নিশ্চয় মানুষ ক্ষতির মধ্যে রয়েছে।",
+    explanation:"ঈমান, সৎকর্ম, সত্যের উপদেশ ও ধৈর্য ছাড়া মানুষ ক্ষতির মধ্যে থাকে।"
   },
 
   {
     day:2,
-    surah:"সূরা আশ-শারহ",
+    surah:"সূরা আশ-শরহ",
     ref:"৯৪ : ৫–৬",
-    arabic:"فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ الْعُسْرِ يُسْرًا",
-    meaning:"নিশ্চয় কষ্টের সাথে স্বস্তি রয়েছে। নিশ্চয় কষ্টের সাথে স্বস্তি রয়েছে।",
-    explanation:"কষ্ট স্থায়ী নয়। আল্লাহ কষ্টের মধ্যেই স্বস্তির পথ রাখেন। তাই কঠিন সময়ে হতাশ না হয়ে ধৈর্য ও আল্লাহর ওপর ভরসা রাখতে হয়।",
-    lesson:"কঠিন সময়েও আশা হারানো যাবে না।"
+    text:"নিশ্চয়ই কষ্টের সাথে স্বস্তি রয়েছে। নিশ্চয়ই কষ্টের সাথে স্বস্তি রয়েছে।",
+    explanation:"কষ্ট কখনোই চিরস্থায়ী নয়। আল্লাহর পক্ষ থেকে স্বস্তির দরজা আসে।"
   },
 
   {
     day:3,
     surah:"সূরা আয-যুমার",
     ref:"৩৯ : ৫৩",
-    arabic:"لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ",
-    meaning:"আল্লাহর রহমত থেকে নিরাশ হয়ো না।",
-    explanation:"মানুষ যত ভুলই করুক, আন্তরিকভাবে ফিরে এলে আল্লাহর ক্ষমা ও রহমতের দরজা বন্ধ নয়।",
-    lesson:"ভুলের পর দূরে সরে না গিয়ে আল্লাহর দিকে ফিরে আসা।"
+    text:"আল্লাহর রহমত থেকে নিরাশ হয়ো না।",
+    explanation:"মানুষ যত ভুলই করুক, আন্তরিকভাবে ফিরে এলে আল্লাহর রহমতের দরজা বন্ধ নয়।"
   }
+
 ];
+
 
 const defaultQuestions = [
+
   "আজ আমি আমার সময়কে কোথায় ব্যয় করেছি—আল্লাহর সন্তুষ্টির পথে, নাকি শুধু নিজের প্রবৃত্তির পেছনে?",
-  "আজ এমন কোন কাজ করেছি যা আমাকে আল্লাহর আরও কাছে নিয়ে গেছে?",
-  "আজ আমার নফস আমাকে কোথায় টানছিল, আর আমি কীভাবে নিজেকে সামলেছি?"
+
+  "আজ এমন কী করেছি যার জন্য আমার অন্তর সত্যিই সন্তুষ্ট?",
+
+  "আজ আমার কোন অভ্যাস আমাকে আল্লাহর কাছ থেকে দূরে নিয়েছে?",
+
+  "আজ আমি কোথায় নিজের নফসকে নিয়ন্ত্রণ করতে পেরেছি?",
+
+  "আজ আমি কারও উপকার করেছি কি?",
+
+  "আজ আমার কথা ও আচরণে কারও কষ্ট হয়েছে কি?",
+
+  "আজ আমি যে ভুল করেছি, আগামীকাল কীভাবে তা এড়াব?",
+
+  "আজ আমার নিয়ত কতটা পরিষ্কার ছিল?"
+
 ];
 
+
 const challenges = [
+
   {
     title:"নফসের একটি ইচ্ছাকে আজ থামাও",
     text:"এমন একটি ছোট ইচ্ছা বেছে নাও যা তোমাকে অপ্রয়োজনীয় কাজে টানে। আজ সচেতনভাবে সেটাকে নিয়ন্ত্রণ করার চেষ্টা করো।"
   },
+
+  {
+    title:"আজ একটি অপ্রয়োজনীয় কাজ ছেড়ে দাও",
+    text:"যে কাজ তোমার সময় নষ্ট করে, আজ সেটার পরিবর্তে উপকারী কিছু করার চেষ্টা করো।"
+  },
+
+  {
+    title:"রাগের সময় নিজেকে থামাও",
+    text:"আজ রাগের মুহূর্তে সঙ্গে সঙ্গে প্রতিক্রিয়া না দিয়ে নিজেকে সামলানোর চেষ্টা করো।"
+  },
+
   {
     title:"আজ একটি ভালো কাজ গোপনে করো",
     text:"এমন একটি ভালো কাজ করো যার প্রশংসা পাওয়ার প্রয়োজন নেই।"
   },
+
   {
-    title:"আজ কথাকে পাহারা দাও",
-    text:"অপ্রয়োজনীয় কথা, গীবত ও কষ্টদায়ক কথা থেকে নিজেকে সংযত রাখার চেষ্টা করো।"
+    title:"আজ নিজের একটি দুর্বলতার বিরুদ্ধে দাঁড়াও",
+    text:"যে জায়গায় তুমি বারবার হেরে যাও, আজ সেখানে অন্তত একবার নিজেকে নিয়ন্ত্রণ করো।"
   }
+
 ];
 
 
+/* ==================== NAVIGATION ==================== */
+
 function openSection(id){
 
-  document.querySelectorAll(".page-section")
+  document
+    .querySelectorAll(".page-section")
     .forEach(section => {
       section.classList.remove("active");
     });
 
-  const target =
-    document.getElementById(id);
+  const target = document.getElementById(id);
 
   if(target){
     target.classList.add("active");
   }
 
-  document.querySelectorAll(".nav-item")
-    .forEach(btn => {
-      btn.classList.remove("active");
+  document
+    .querySelectorAll(".nav-item")
+    .forEach(button => {
+      button.classList.remove("active");
     });
 
-  const navButtons =
-    document.querySelectorAll(".nav-item");
-
-  const map = {
+  const navMap = {
     today:0,
     muhasaba:1,
     ayah:2,
@@ -1519,9 +1535,17 @@ function openSection(id){
     path:4
   };
 
-  if(map[id] !== undefined && navButtons[map[id]]){
-    navButtons[map[id]].classList.add("active");
+  const buttons =
+    document.querySelectorAll(".nav-item");
+
+  if(navMap[id] !== undefined && buttons[navMap[id]]){
+    buttons[navMap[id]].classList.add("active");
   }
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
 
   if(id === "days"){
     loadSavedDays();
@@ -1530,13 +1554,56 @@ function openSection(id){
   if(id === "profile"){
     loadProfile();
   }
+
+  if(id === "ayah"){
+    searchAyahs();
+  }
+
 }
 
 
+/* ==================== MUHASABA FEATURE ==================== */
+
+function focusMuhasaba(title){
+
+  const prompt =
+    document.getElementById("muhasabaPrompt");
+
+  const textarea =
+    document.getElementById("muhasabaText");
+
+  if(prompt){
+    prompt.textContent =
+      "আজকের মুহাসাবায় — " +
+      title +
+      " নিয়ে নিজের কাছে সৎভাবে হিসাব দাও।";
+  }
+
+  if(textarea){
+
+    textarea.focus();
+
+    textarea.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
+
+  }
+
+}
+
+
+/* ==================== AYAH MODAL ==================== */
+
 function openAddAyah(){
-  document
-    .getElementById("addAyahModal")
-    ?.classList.add("show");
+
+  const modal =
+    document.getElementById("addAyahModal");
+
+  if(modal){
+    modal.classList.add("show");
+  }
+
 }
 
 
@@ -1548,78 +1615,123 @@ function closeModal(id){
   if(modal){
     modal.classList.remove("show");
   }
+
 }
 
+
+/* ==================== TODAY ==================== */
 
 function getTodayIndex(){
 
   const start =
     new Date(new Date().getFullYear(),0,0);
 
-  const now = new Date();
+  const today =
+    new Date();
 
   const diff =
-    now - start;
+    today - start;
 
-  const oneDay =
-    1000 * 60 * 60 * 24;
+  return Math.floor(
+    diff / (1000 * 60 * 60 * 24)
+  );
 
-  return Math.floor(diff / oneDay);
 }
 
 
 function loadTodayContent(){
 
   const index =
-    getTodayIndex();
+    (getTodayIndex() - 1) %
+    defaultAyahs.length;
 
   const ayah =
-    ayahs[index % ayahs.length];
+    defaultAyahs[
+      index < 0 ? 0 : index
+    ];
 
-  if(ayah){
-
-    document.getElementById("todayAyahSurah").textContent =
-      ayah.surah;
-
-    document.getElementById("todayAyahRef").textContent =
-      ayah.ref;
-
-    document.getElementById("todayAyahArabic").textContent =
-      ayah.arabic;
-
-    document.getElementById("todayAyahMeaning").textContent =
-      ayah.meaning;
-
-    document.getElementById("todayAyahExplanation").textContent =
-      ayah.explanation;
-
-    document.getElementById("todayAyahLesson").textContent =
-      ayah.lesson;
-  }
-
-  const q =
-    defaultQuestions[index % defaultQuestions.length];
-
-  document.getElementById("todayQuestion").textContent =
-    q;
+  const question =
+    defaultQuestions[
+      (getTodayIndex() - 1) %
+      defaultQuestions.length
+    ];
 
   const challenge =
-    challenges[index % challenges.length];
+    challenges[
+      (getTodayIndex() - 1) %
+      challenges.length
+    ];
 
-  document.getElementById("nafsChallengeTitle").textContent =
-    challenge.title;
 
-  document.getElementById("nafsChallengeText").textContent =
-    challenge.text;
+  const surah =
+    document.getElementById("todayAyahSurah");
+
+  const ref =
+    document.getElementById("todayAyahRef");
+
+  const meaning =
+    document.getElementById("todayAyahMeaning");
+
+  const explanation =
+    document.getElementById("todayAyahExplanation");
+
+  const questionBox =
+    document.getElementById("todayQuestion");
+
+  const challengeTitle =
+    document.getElementById("nafsChallengeTitle");
+
+  const challengeText =
+    document.getElementById("nafsChallengeText");
+
+
+  if(surah){
+    surah.textContent =
+      ayah.surah;
+  }
+
+  if(ref){
+    ref.textContent =
+      ayah.ref;
+  }
+
+  if(meaning){
+    meaning.textContent =
+      ayah.text;
+  }
+
+  if(explanation){
+    explanation.textContent =
+      ayah.explanation;
+  }
+
+  if(questionBox){
+    questionBox.textContent =
+      question;
+  }
+
+  if(challengeTitle){
+    challengeTitle.textContent =
+      challenge.title;
+  }
+
+  if(challengeText){
+    challengeText.textContent =
+      challenge.text;
+  }
+
 }
 
 
 function setTodayDate(){
 
-  const el =
+  const dateBox =
     document.getElementById("todayDate");
 
-  if(!el) return;
+  if(!dateBox) return;
+
+  const now =
+    new Date();
 
   const days = [
     "রবিবার",
@@ -1631,199 +1743,302 @@ function setTodayDate(){
     "শনিবার"
   ];
 
-  const d = new Date();
+  const months = [
+    "জানুয়ারি",
+    "ফেব্রুয়ারি",
+    "মার্চ",
+    "এপ্রিল",
+    "মে",
+    "জুন",
+    "জুলাই",
+    "আগস্ট",
+    "সেপ্টেম্বর",
+    "অক্টোবর",
+    "নভেম্বর",
+    "ডিসেম্বর"
+  ];
 
-  el.textContent =
-    `${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()} • ${days[d.getDay()]}`;
+  dateBox.textContent =
+    now.getDate() +
+    " " +
+    months[now.getMonth()] +
+    " • " +
+    days[now.getDay()];
+
 }
 
 
-function saveToday(){
+/* ==================== SAVE TODAY ==================== */
 
-  const date =
-    new Date().toISOString().slice(0,10);
+function saveToday(){
 
   const data = {
 
+    date:new Date().toLocaleDateString("en-CA"),
+
+    question:
+      document.getElementById(
+        "todayQuestionAnswer"
+      )?.value || "",
+
+    night:
+      document.getElementById(
+        "nightReflection"
+      )?.value || "",
+
     tahajjud:
-      document.getElementById("amalTahajjud").checked,
+      document.getElementById(
+        "amalTahajjud"
+      )?.checked || false,
 
     quran:
-      document.getElementById("amalQuran").checked,
+      document.getElementById(
+        "amalQuran"
+      )?.checked || false,
 
     dhikr:
-      document.getElementById("amalDhikr").checked,
+      document.getElementById(
+        "amalDhikr"
+      )?.checked || false,
 
     dua:
-      document.getElementById("amalDua").checked,
+      document.getElementById(
+        "amalDua"
+      )?.checked || false,
 
     challenge:
-      document.getElementById("nafsChallengeDone").checked,
+      document.getElementById(
+        "nafsChallengeDone"
+      )?.checked || false
 
-    answer:
-      document.getElementById("todayQuestionAnswer").value,
-
-    reflection:
-      document.getElementById("nightReflection").value
   };
 
+
   localStorage.setItem(
-    "today_" + date,
+    "atma_today_" + data.date,
     JSON.stringify(data)
   );
+
 
   alert("আজকের হিসাব সংরক্ষণ হয়েছে।");
 
   loadSavedDays();
+
 }
 
+
+/* ==================== MUHASABA SAVE ==================== */
 
 function saveMuhasaba(){
 
-  const text =
-    document.getElementById("muhasabaText").value;
+  const textarea =
+    document.getElementById("muhasabaText");
 
-  const date =
-    new Date().toISOString().slice(0,10);
+  const status =
+    document.getElementById("muhasabaStatus");
 
-  localStorage.setItem(
-    "muhasaba_" + date,
-    text
-  );
-
-  alert("মুহাসাবা সংরক্ষণ হয়েছে।");
-}
-
-
-function savePathPromise(){
+  if(!textarea) return;
 
   const text =
-    document.getElementById("pathPromise").value;
+    textarea.value.trim();
 
-  localStorage.setItem(
-    "pathPromise",
-    text
-  );
+  if(!text){
 
-  alert("অঙ্গীকার সংরক্ষণ হয়েছে।");
-}
+    if(status){
+      status.textContent =
+        "আগে তোমার মুহাসাবা লিখে নাও।";
+    }
 
+    textarea.focus();
 
-function saveProfile(){
-
-  const name =
-    document.getElementById("profileName").value.trim();
-
-  if(!name){
-    alert("আগে তোমার নাম লিখো।");
     return;
   }
 
+
+  const date =
+    new Date().toLocaleDateString("en-CA");
+
+
   localStorage.setItem(
-    "profileName",
-    name
+    "atma_muhasaba_" + date,
+    text
   );
 
-  document.getElementById(
-    "profileNameDisplay"
-  ).textContent = name;
 
-  alert("প্রোফাইল সংরক্ষণ হয়েছে।");
+  if(status){
+    status.textContent =
+      "✓ আজকের মুহাসাবা সংরক্ষণ হয়েছে।";
+  }
+
+}
+
+
+/* ==================== PATH SAVE ==================== */
+
+function savePathPromise(){
+
+  const goal =
+    document.getElementById("pathGoal");
+
+  const promise =
+    document.getElementById("pathPromise");
+
+  const status =
+    document.getElementById("pathStatus");
+
+
+  localStorage.setItem(
+    "atma_path_goal",
+    goal?.value || ""
+  );
+
+  localStorage.setItem(
+    "atma_path_promise",
+    promise?.value || ""
+  );
+
+
+  if(status){
+    status.textContent =
+      "✓ আমার পথ সংরক্ষণ হয়েছে।";
+  }
+
+}
+
+
+/* ==================== PROFILE ==================== */
+
+function saveProfile(){
+
+  const input =
+    document.getElementById("profileNameInput");
+
+  const display =
+    document.getElementById("profileName");
+
+  if(!input) return;
+
+  const name =
+    input.value.trim();
+
+
+  if(name){
+
+    localStorage.setItem(
+      "atma_profile_name",
+      name
+    );
+
+    if(display){
+      display.textContent =
+        name;
+    }
+
+  }
+
 }
 
 
 function loadProfile(){
 
-  const name =
-    localStorage.getItem("profileName");
-
-  if(!name) return;
-
-  const input =
-    document.getElementById("profileName");
+  const saved =
+    localStorage.getItem(
+      "atma_profile_name"
+    );
 
   const display =
-    document.getElementById("profileNameDisplay");
+    document.getElementById("profileName");
 
-  if(input){
-    input.value = name;
+  const input =
+    document.getElementById("profileNameInput");
+
+
+  if(saved){
+
+    if(display){
+      display.textContent =
+        saved;
+    }
+
+    if(input){
+      input.value =
+        saved;
+    }
+
   }
 
-  if(display){
-    display.textContent = name;
-  }
 }
 
+
+/* ==================== AYAH SAVE ==================== */
 
 function saveAyah(){
 
   const day =
-    Number(document.getElementById("ayahDay").value);
+    document.getElementById("ayahDay")?.value.trim();
 
   const surah =
-    document.getElementById("ayahSurah").value.trim();
+    document.getElementById("ayahSurah")?.value.trim();
 
   const ref =
-    document.getElementById("ayahRef").value.trim();
+    document.getElementById("ayahRef")?.value.trim();
 
-  const arabic =
-    document.getElementById("ayahArabic").value.trim();
-
-  const meaning =
-    document.getElementById("ayahMeaning").value.trim();
+  const text =
+    document.getElementById("ayahText")?.value.trim();
 
   const explanation =
-    document.getElementById("ayahExplanation").value.trim();
+    document.getElementById("ayahExplanation")?.value.trim();
 
-  const lesson =
-    document.getElementById("ayahLesson").value.trim();
 
-  if(!day || !surah || !ref || !arabic || !meaning){
+  if(!surah || !ref || !text){
 
-    alert("দিন, সূরা, আয়াত নম্বর, আরবি আয়াত ও অর্থ পূরণ করো।");
+    alert("সূরা, আয়াত নম্বর ও আয়াতের লেখা পূরণ করো।");
 
     return;
   }
 
-  const newAyah = {
-    day,
-    surah,
-    ref,
-    arabic,
-    meaning,
-    explanation,
-    lesson
-  };
 
   const saved =
     JSON.parse(
-      localStorage.getItem("ayahs") || "[]"
+      localStorage.getItem("atma_saved_ayahs")
+      || "[]"
     );
 
-  saved.push(newAyah);
+
+  saved.push({
+
+    day:day || "",
+    surah:surah,
+    ref:ref,
+    text:text,
+    explanation:explanation || ""
+
+  });
+
 
   localStorage.setItem(
-    "ayahs",
+    "atma_saved_ayahs",
     JSON.stringify(saved)
   );
 
-  ayahs.push(newAyah);
-
-  searchAyahs();
 
   closeModal("addAyahModal");
 
-  document.getElementById("ayahDay").value = "";
-  document.getElementById("ayahSurah").value = "";
-  document.getElementById("ayahRef").value = "";
-  document.getElementById("ayahArabic").value = "";
-  document.getElementById("ayahMeaning").value = "";
-  document.getElementById("ayahExplanation").value = "";
-  document.getElementById("ayahLesson").value = "";
+  document.getElementById("ayahDay").value="";
+  document.getElementById("ayahSurah").value="";
+  document.getElementById("ayahRef").value="";
+  document.getElementById("ayahText").value="";
+  document.getElementById("ayahExplanation").value="";
 
-  alert("নতুন আয়াত সংরক্ষণ হয়েছে।");
+
+  searchAyahs();
+
+  alert("আয়াত সংরক্ষণ হয়েছে।");
+
 }
 
+
+/* ==================== AYAH SEARCH ==================== */
 
 function searchAyahs(){
 
@@ -1832,118 +2047,107 @@ function searchAyahs(){
 
   if(!list) return;
 
-  const query =
-    (document.getElementById("ayahSearch")?.value || "")
-      .toLowerCase()
-      .trim();
+
+  const search =
+    (
+      document.getElementById("ayahSearch")
+      ?.value || ""
+    )
+    .trim()
+    .toLowerCase();
+
 
   const saved =
     JSON.parse(
-      localStorage.getItem("ayahs") || "[]"
+      localStorage.getItem("atma_saved_ayahs")
+      || "[]"
     );
+
 
   const all =
-    [...ayahs, ...saved];
+    [...defaultAyahs,...saved];
 
-  const unique =
-    all.filter((item,index,self) =>
-      index === self.findIndex(a =>
-        a.day === item.day &&
-        a.surah === item.surah &&
-        a.ref === item.ref
-      )
-    );
+
+  const filtered =
+    all.filter(item => {
+
+      const content =
+        (
+          item.surah +
+          " " +
+          item.ref +
+          " " +
+          item.text +
+          " " +
+          item.explanation
+        ).toLowerCase();
+
+      return content.includes(search);
+
+    });
+
 
   list.innerHTML = "";
 
-  const filtered =
-    unique.filter(a =>
-      String(a.day).includes(query) ||
-      a.surah.toLowerCase().includes(query) ||
-      a.ref.toLowerCase().includes(query) ||
-      a.meaning.toLowerCase().includes(query)
-    );
 
   if(filtered.length === 0){
 
-    list.innerHTML = `
-      <div class="empty-state">
-        কোনো আয়াত পাওয়া যায়নি।
-      </div>
-    `;
+    list.innerHTML =
+      '<div class="empty-state">কোনো আয়াত পাওয়া যায়নি।</div>';
 
     return;
+
   }
 
-  filtered.forEach(a => {
 
-    const card =
+  filtered.forEach((item,index) => {
+
+    const div =
       document.createElement("div");
 
-    card.className = "ayah-item";
+    div.className =
+      "ayah-item";
 
-    card.innerHTML = `
-      <h3>
-        দিন ${a.day} • ${a.surah}
-      </h3>
+
+    div.innerHTML = `
+
+      <h3>${item.surah}</h3>
 
       <small>
-        ${a.ref}
+        ${item.day ? "দিন " + item.day + " • " : ""}
+        ${item.ref}
       </small>
 
-      <p>
-        ${a.meaning}
-      </p>
+      <p>${item.text}</p>
+
+      ${
+        item.explanation
+        ? `<p>${item.explanation}</p>`
+        : ""
+      }
+
     `;
 
-    card.onclick = () => {
-      showAyahDetails(a);
-    };
 
-    list.appendChild(card);
+    list.appendChild(div);
+
   });
+
 }
 
 
-function showAyahDetails(a){
-
-  if(!a) return;
-
-  const modal =
-    document.getElementById("ayahDetailsModal");
-
-  if(!modal) return;
-
-  document.getElementById("detailSurah").textContent =
-    a.surah;
-
-  document.getElementById("detailRef").textContent =
-    a.ref;
-
-  document.getElementById("detailArabic").textContent =
-    a.arabic;
-
-  document.getElementById("detailMeaning").textContent =
-    a.meaning;
-
-  document.getElementById("detailExplanation").textContent =
-    a.explanation || "ব্যাখ্যা এখনো যোগ করা হয়নি।";
-
-  document.getElementById("detailLesson").textContent =
-    a.lesson || "শিক্ষা এখনো যোগ করা হয়নি।";
-
-  modal.classList.add("show");
-}
-
+/* ==================== SAVED DAYS ==================== */
 
 function loadSavedDays(){
 
   const container =
-    document.getElementById("savedDays");
+    document.getElementById("savedDaysList");
 
   if(!container) return;
 
+
   const keys = [];
+
 
   for(let i=0;i<localStorage.length;i++){
 
@@ -1953,150 +2157,224 @@ function loadSavedDays(){
     if(
       key &&
       (
-        key.startsWith("today_") ||
-        key.startsWith("muhasaba_")
+        key.startsWith("atma_today_") ||
+        key.startsWith("atma_muhasaba_")
       )
     ){
+
       keys.push(key);
+
     }
+
   }
+
 
   keys.sort().reverse();
 
-  container.innerHTML = "";
 
   if(keys.length === 0){
 
     container.innerHTML = `
-      <div class="empty-state">
-        এখনো কোনো দিনের হিসাব সংরক্ষণ করা হয়নি।
+
+      <div class="card empty-state">
+
+        📚 এখনো কোনো দিনের হিসাব সংরক্ষণ করা হয়নি।
+
+        <br><br>
+
+        আজকের হিসাব লিখে সংরক্ষণ করলে
+        এখানে দেখা যাবে।
+
       </div>
+
     `;
 
     return;
+
   }
+
+
+  container.innerHTML = "";
+
 
   keys.forEach(key => {
 
-    const item =
+    const value =
+      localStorage.getItem(key);
+
+    const card =
       document.createElement("div");
 
-    item.className = "ayah-item";
+    card.className =
+      "card";
 
-    item.innerHTML = `
-      <h3>
-        📅 ${key.replace("today_","").replace("muhasaba_","")}
-      </h3>
 
-      <p>
-        সংরক্ষিত দিনের হিসাব পাওয়া গেছে।
-      </p>
-    `;
+    if(key.startsWith("atma_today_")){
 
-    container.appendChild(item);
+      const data =
+        JSON.parse(value || "{}");
+
+
+      card.innerHTML = `
+
+        <div class="card-label">
+          📅 ${data.date || key.replace("atma_today_","")}
+        </div>
+
+        <p>
+          ${
+            data.night ||
+            data.question ||
+            "আজকের কোনো লেখা নেই।"
+          }
+        </p>
+
+      `;
+
+    }
+    else{
+
+      card.innerHTML = `
+
+        <div class="card-label">
+          🪞 মুহাসাবা • ${key.replace("atma_muhasaba_","")}
+        </div>
+
+        <p>
+          ${value}
+        </p>
+
+      `;
+
+    }
+
+
+    container.appendChild(card);
+
   });
+
 }
 
 
-document.addEventListener("DOMContentLoaded", () => {
+/* ==================== LOAD PATH ==================== */
 
-  setTodayDate();
+function loadPath(){
 
-  loadTodayContent();
+  const goal =
+    localStorage.getItem(
+      "atma_path_goal"
+    );
 
-  loadProfile();
-
-  loadSavedDays();
-
-  searchAyahs();
-
-});
+  const promise =
+    localStorage.getItem(
+      "atma_path_promise"
+    );
 
 
-window.addEventListener("click", event => {
+  const goalBox =
+    document.getElementById("pathGoal");
 
-  document.querySelectorAll(".modal.show")
-    .forEach(modal => {
+  const promiseBox =
+    document.getElementById("pathPromise");
 
-      if(event.target === modal){
-        modal.classList.remove("show");
-      }
 
-    });
+  if(goal && goalBox){
+    goalBox.value =
+      goal;
+  }
 
-});
+  if(promise && promiseBox){
+    promiseBox.value =
+      promise;
+  }
+
+}
+
+
+/* ==================== LOAD MUHASABA ==================== */
+
+function loadMuhasaba(){
+
+  const date =
+    new Date().toLocaleDateString("en-CA");
+
+  const saved =
+    localStorage.getItem(
+      "atma_muhasaba_" + date
+    );
+
+  const box =
+    document.getElementById("muhasabaText");
+
+
+  if(saved && box){
+    box.value =
+      saved;
+  }
+
+}
+
+
+/* ==================== MODAL OUTSIDE CLICK ==================== */
+
+window.addEventListener(
+  "click",
+  function(event){
+
+    const modal =
+      document.getElementById("addAyahModal");
+
+    if(
+      modal &&
+      event.target === modal
+    ){
+
+      closeModal("addAyahModal");
+
+    }
+
+  }
+);
+
+
+/* ==================== START ==================== */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    setTodayDate();
+
+    loadTodayContent();
+
+    searchAyahs();
+
+    loadProfile();
+
+    loadPath();
+
+    loadMuhasaba();
+
+  }
+);
 
 </script>
 
-
 </main>
-
-<div id="ayahDetailsModal" class="modal">
-
-  <div class="modal-box">
-
-    <button
-      class="close-btn"
-      onclick="closeModal('ayahDetailsModal')"
-    >
-      ×
-    </button>
-
-    <h2 id="detailSurah">
-      সূরা
-    </h2>
-
-    <div id="detailRef" class="ayah-ref">
-      আয়াত
-    </div>
-
-    <div id="detailArabic" class="arabic">
-      —
-    </div>
-
-    <div class="divider"></div>
-
-    <h3>
-      অর্থ
-    </h3>
-
-    <p id="detailMeaning">
-      —
-    </p>
-
-    <h3>
-      ব্যাখ্যা
-    </h3>
-
-    <p id="detailExplanation">
-      —
-    </p>
-
-    <h3>
-      শিক্ষা
-    </h3>
-
-    <p id="detailLesson">
-      —
-    </p>
-
-  </div>
-
-</div>
-
 
 <footer
   style="
-    padding:30px 18px 100px;
     text-align:center;
+    padding:25px 15px 110px;
     color:#607568;
-    font-size:11px;
+    font-size:13px;
   "
 >
-
-  আত্মপ্রতিবিম্ব — আয়নায় উন্মোচিত অন্তর
-
+  🪞 আত্মপ্রতিবিম্ব
+  <br>
+  আয়নায় উন্মোচিত অন্তর
 </footer>
 
 </body>
-  </html>
+</html>
+        
