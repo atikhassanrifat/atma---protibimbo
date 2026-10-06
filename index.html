@@ -2,765 +2,1802 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>আত্ম প্রতিবিম্ব — আয়নায় উন্মোচিত অন্তর</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#07100c">
+<title>আত্মপ্রতিবিম্ব — আয়নায় উন্মোচিত অন্তর</title>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#050a08;color:#eee;font-family:"Noto Sans Bengali",sans-serif;line-height:1.7}
-.wrap{max-width:850px;width:92%;margin:auto;padding:25px 0 60px}
-header{text-align:center;padding:25px 0}
-.logo{width:105px;height:105px;border:2px solid #b99a50;border-radius:50%;overflow:hidden;margin:auto}
-.logo img{width:100%;height:100%;object-fit:cover}
-h1{color:#d5b766;margin:15px 0 0}.tag{color:#999}
-.box{background:#0b1511;border:1px solid #20392e;border-radius:15px;padding:18px;margin:16px 0}
-.box h2{color:#d5b766;font-size:20px;margin:0 0 13px}
-.arabic{text-align:center;direction:rtl;font-size:25px;color:#e4d39b}
-.center{text-align:center}.muted{color:#999;font-size:14px}
-.lesson{background:#07100c;border-left:3px solid #b99a50;padding:12px;margin-top:12px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
-.item{padding:10px;background:#07100c;border-radius:9px}
-.prayer{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #17251f}
-.prayer:last-child{border:0}
-select,input,textarea{width:100%;background:#07100c;color:#eee;border:1px solid #294638;border-radius:8px;padding:9px;font:inherit}
-textarea{min-height:80px;resize:vertical}
-input[type=checkbox]{width:auto;accent-color:#b99a50}
-.check{display:flex;gap:8px;align-items:center}
-.score{text-align:center;font-size:42px;color:#d5b766}
-.bar{height:9px;background:#18251f;border-radius:20px;overflow:hidden}
-.fill{height:100%;width:0;background:#b99a50}
-.btns{display:flex;flex-wrap:wrap;gap:9px}
-button{padding:10px 15px;border:0;border-radius:8px;font:inherit;background:#b99a50;color:#08100c}
-button.dark{background:#182a22;color:#eee;border:1px solid #315044}
-button.red{background:#391b1b;color:#eee}
-.history{border:1px solid #1e352b;border-radius:10px;margin:8px 0;overflow:hidden}
-.head{padding:12px;display:flex;justify-content:space-between;cursor:pointer}
-.detail{display:none;border-top:1px solid #1e352b;padding:12px;color:#bbb}
-.detail.open{display:block}
-.card{background:#07100c;border-radius:9px;padding:11px;margin:8px 0}
-footer{text-align:center;color:#666;margin-top:30px}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  background:#07100c;
+  color:#e8f0eb;
+  font-family:Arial,sans-serif;
+  min-height:100vh;
+}
+
+button,input,textarea{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+.site-header{
+  padding:18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #20352a;
+  background:#09150f;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand-icon{
+  font-size:32px;
+}
+
+.brand-text h1{
+  font-size:22px;
+  color:#dcefe2;
+}
+
+.brand-text p{
+  margin-top:4px;
+  font-size:12px;
+  color:#91a99a;
+}
+
+.profile-btn{
+  width:42px;
+  height:42px;
+  border:1px solid #31523e;
+  border-radius:50%;
+  background:#102118;
+  color:#e8f0eb;
+  font-size:20px;
+}
+
+main{
+  width:100%;
+  max-width:900px;
+  margin:auto;
+  padding:18px;
+}
+  .page-section{
+  display:none;
+}
+
+.page-section.active{
+  display:block;
+}
+
+.section-heading{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin:10px 0 18px;
+}
+
+.eyebrow{
+  display:block;
+  color:#8eb49b;
+  font-size:13px;
+  margin-bottom:5px;
+}
+
+.section-heading h2{
+  font-size:25px;
+  color:#edf7f0;
+}
+
+.date-badge{
+  padding:8px 12px;
+  border:1px solid #31523e;
+  border-radius:12px;
+  background:#102118;
+  color:#b7d0be;
+  font-size:12px;
+}
+
+.welcome-card{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  padding:18px;
+  margin-bottom:16px;
+  border:1px solid #284533;
+  border-radius:18px;
+  background:linear-gradient(135deg,#102218,#0b1710);
+}
+
+.welcome-icon{
+  font-size:34px;
+}
+
+.welcome-card h3{
+  margin-bottom:7px;
+  font-size:18px;
+}
+
+.welcome-card p{
+  color:#a9b9ae;
+  line-height:1.7;
+  font-size:14px;
+}
+  .card{
+  padding:18px;
+  margin-bottom:16px;
+  border:1px solid #263f30;
+  border-radius:18px;
+  background:#0d1a12;
+}
+
+.card-label{
+  margin-bottom:12px;
+  color:#9fc2a9;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.ayah-card{
+  background:linear-gradient(145deg,#102219,#0b1710);
+}
+
+.ayah-surah{
+  color:#dcefe2;
+  font-size:18px;
+  font-weight:bold;
+}
+
+.ayah-ref{
+  margin-top:4px;
+  color:#789683;
+  font-size:12px;
+}
+
+.arabic{
+  margin:22px 0;
+  color:#f0f5f1;
+  font-size:24px;
+  line-height:2;
+  text-align:right;
+}
+
+.divider{
+  height:1px;
+  background:#263f30;
+  margin:15px 0;
+}
+
+.card h3{
+  margin:14px 0 7px;
+  color:#cfe2d4;
+  font-size:15px;
+}
+
+.card p{
+  color:#aabbb0;
+  line-height:1.8;
+  font-size:14px;
+}
+
+.question-text{
+  color:#dcefe2 !important;
+  font-size:16px !important;
+}
+
+.text-input{
+  width:100%;
+  margin-top:12px;
+  padding:13px;
+  border:1px solid #2b4936;
+  border-radius:12px;
+  outline:none;
+  resize:vertical;
+  background:#08130d;
+  color:#e8f0eb;
+}
+
+.text-input:focus{
+  border-color:#648d70;
+  }
+
+  .primary-btn{
+  width:100%;
+  margin-top:14px;
+  padding:14px;
+  border:0;
+  border-radius:13px;
+  background:#315c3d;
+  color:#f2fff5;
+  font-weight:bold;
+}
+
+.primary-btn:active{
+  transform:scale(.98);
+}
+
+.amal-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.check-card{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding:13px;
+  border:1px solid #294533;
+  border-radius:13px;
+  background:#0a160f;
+  color:#c7d8cc;
+  font-size:13px;
+}
+
+.check-card input,
+.challenge-check input{
+  accent-color:#6f9b79;
+}
+
+.challenge-card{
+  border-color:#4a3920;
+  background:linear-gradient(145deg,#17140b,#0d150f);
+}
+
+.challenge-check{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  margin-top:15px;
+  color:#c9d8cd;
+  font-size:13px;
+}
+
+.night-card{
+  margin-bottom:90px;
+}
+
+.muted-text{
+  color:#718579 !important;
+}
+
+.bottom-nav{
+  position:fixed;
+  left:50%;
+  bottom:0;
+  transform:translateX(-50%);
+  width:100%;
+  max-width:900px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  padding:8px 5px;
+  border-top:1px solid #263f30;
+  background:#08120d;
+  z-index:50;
+}
+
+.nav-item{
+  border:0;
+  background:none;
+  color:#718579;
+  padding:7px 2px;
+}
+
+.nav-item span{
+  display:block;
+  font-size:19px;
+}
+
+.nav-item small{
+  display:block;
+  margin-top:3px;
+  font-size:10px;
+}
+
+.nav-item.active{
+  color:#d5eadb;
+  }
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:100;
+  padding:20px;
+  background:rgba(0,0,0,.78);
+  overflow-y:auto;
+}
+
+.modal.show{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal-box{
+  width:100%;
+  max-width:600px;
+  padding:20px;
+  border:1px solid #31523e;
+  border-radius:20px;
+  background:#0c1911;
+}
+
+.modal-box h2{
+  margin-bottom:16px;
+  color:#e4f1e7;
+}
+
+.close-btn{
+  float:right;
+  width:34px;
+  height:34px;
+  border:0;
+  border-radius:50%;
+  background:#18271d;
+  color:#dcefe2;
+  font-size:18px;
+}
+
+.form-group{
+  margin-bottom:13px;
+}
+
+.form-group label{
+  display:block;
+  margin-bottom:6px;
+  color:#9eb5a4;
+  font-size:12px;
+}
+
+.form-group input,
+.form-group textarea,
+.search-box input{
+  width:100%;
+  padding:12px;
+  border:1px solid #294533;
+  border-radius:11px;
+  outline:none;
+  background:#08130d;
+  color:#e8f0eb;
+}
+
+.search-box{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:16px;
+  padding:10px 12px;
+  border:1px solid #294533;
+  border-radius:13px;
+  background:#0c1911;
+}
+
+.search-box input{
+  border:0;
+  padding:3px;
+}
+.ayah-list{
+  display:grid;
+  gap:12px;
+}
+
+.ayah-item{
+  padding:16px;
+  border:1px solid #263f30;
+  border-radius:16px;
+  background:#0d1a12;
+}
+
+.ayah-item h3{
+  color:#dcefe2;
+  font-size:16px;
+  margin-bottom:5px;
+}
+
+.ayah-item small{
+  color:#718b7a;
+}
+
+.ayah-item p{
+  margin-top:9px;
+  color:#a9baae;
+  line-height:1.7;
+  font-size:13px;
+}
+
+.icon-btn{
+  width:40px;
+  height:40px;
+  border:1px solid #31523e;
+  border-radius:12px;
+  background:#102118;
+  color:#dcefe2;
+  font-size:22px;
+}
+
+.empty-state{
+  padding:30px 15px;
+  text-align:center;
+  color:#718579;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.feature-btn{
+  padding:15px 10px;
+  border:1px solid #294533;
+  border-radius:14px;
+  background:#0d1a12;
+  color:#cfe2d4;
+  text-align:left;
+}
+
+.feature-btn strong{
+  display:block;
+  margin-bottom:5px;
+  font-size:14px;
+}
+
+.feature-btn span{
+  color:#718579;
+  font-size:11px;
+  }
+
+  @media(max-width:600px){
+  main{
+    padding:14px;
+  }
+
+  .site-header{
+    padding:15px;
+  }
+
+  .brand-text h1{
+    font-size:20px;
+  }
+
+  .section-heading h2{
+    font-size:22px;
+  }
+
+  .welcome-card{
+    padding:15px;
+  }
+
+  .arabic{
+    font-size:21px;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .amal-grid{
+    grid-template-columns:1fr;
+  }
+
+  .bottom-nav{
+    padding-bottom:10px;
+  }
+}
+
+@media(min-width:601px){
+  .bottom-nav{
+    border-radius:18px 18px 0 0;
+  }
+}
 </style>
-</head>
 
-<body>
-<div class="wrap">
+  
+  <body>
 
-<header>
-<div class="logo">
-<img src="profile.png" alt="আয়নার সামনে দাঁড়ানো মানুষ">
-</div>
+<header class="site-header">
+  <div class="brand">
+    <div class="brand-icon">🪞</div>
+    <div class="brand-text">
+      <h1>আত্মপ্রতিবিম্ব</h1>
+      <p>আয়নায় উন্মোচিত অন্তর</p>
+    </div>
+  </div>
 
-<h1>আত্ম প্রতিবিম্ব</h1>
-<div class="tag">আয়নায় উন্মোচিত অন্তর</div>
-
-<div class="box">
-আজ নিজের অন্তরের সামনে দাঁড়ানোর দিন।<br>
-মানুষের চোখে নয়—নিজের রবের সামনে কেমন ছিলাম?
-</div>
+  <button class="profile-btn" onclick="openSection('profile')">
+    👤
+  </button>
 </header>
 
-<section class="box">
-<h2>📖 আজকের আয়াত</h2>
-<div id="ad" class="muted center"></div>
-<p id="aa" class="arabic"></p>
-<p id="ab" class="center"></p>
-<p id="ar" class="muted center"></p>
-<div id="al" class="lesson"></div>
+<main id="mainContent">
+
+<section id="today" class="page-section active">
+
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">আজ</span>
+      <h2>আজকের দিন</h2>
+    </div>
+
+    <div id="todayDate" class="date-badge">
+      আজ
+    </div>
+  </div>
+
+  <div class="welcome-card">
+    <div class="welcome-icon">🪞</div>
+
+    <div>
+      <h3>আজ নিজেকে দেখো</h3>
+      <p>
+        দিনের শেষে পৃথিবী তোমাকে কী ভাবল,
+        তার চেয়ে গুরুত্বপূর্ণ—
+        তুমি নিজের আয়নায় নিজেকে কী দেখলে।
+      </p>
+    </div>
+  </div>
+
+  <div class="card ayah-card">
+
+    <div class="card-label">📖 আজকের আয়াত</div>
+
+    <div id="todayAyahSurah" class="ayah-surah">
+      সূরা
+    </div>
+
+    <div id="todayAyahRef" class="ayah-ref">
+      আয়াত
+    </div>
+
+    <div id="todayAyahArabic" class="arabic">
+      —
+    </div>
+
+    <div class="divider"></div>
+
+    <h3>অর্থ</h3>
+    <p id="todayAyahMeaning">—</p>
+
+    <h3>ব্যাখ্যা</h3>
+    <p id="todayAyahExplanation">—</p>
+
+  </div>
+    <h3>শিক্ষা</h3>
+    <p id="todayAyahLesson">—</p>
+
+  </div>
+
+  <div class="card">
+
+    <div class="card-label">
+      🪞 আত্মজিজ্ঞাসা
+    </div>
+
+    <p id="todayQuestion" class="question-text">
+      —
+    </p>
+
+    <textarea
+      id="todayQuestionAnswer"
+      class="text-input"
+      rows="4"
+      placeholder="নিজের কাছে সৎভাবে উত্তর দাও..."
+    ></textarea>
+
+  </div>
+
+  <div class="card">
+
+    <div class="card-label">
+      ✦ আজকের করণীয়
+    </div>
+
+    <p id="todayAction">—</p>
+
+  </div>
+
+  <div class="card">
+
+    <div class="card-label">
+      🤲 আজকের আমল
+    </div>
+
+    <div class="amal-grid">
+
+      <label class="check-card">
+        <input type="checkbox" id="amalTahajjud">
+        <span>🌙 তাহাজ্জুদ</span>
+      </label>
+
+      <label class="check-card">
+        <input type="checkbox" id="amalQuran">
+        <span>📖 কুরআন</span>
+      </label>
+
+      <label class="check-card">
+        <input type="checkbox" id="amalDhikr">
+        <span>📿 যিকির</span>
+      </label>
+
+      <label class="check-card">
+        <input type="checkbox" id="amalDua">
+        <span>🤲 দোয়া</span>
+      </label>
+
+    </div>
+
+  </div>
+
+  <div class="card challenge-card">
+
+    <div class="card-label">
+      🔥 আজকের Nafs Challenge
+    </div>
+
+    <h3 id="nafsChallengeTitle">
+      —
+    </h3>
+
+    <p id="nafsChallengeText">
+      —
+    </p>
+
+    <label class="challenge-check">
+      <input type="checkbox" id="nafsChallengeDone">
+      <span>আজ আমি চেষ্টা করেছি</span>
+    </label>
+
+  </div>
+
+  <div class="card night-card">
+
+    <div class="card-label">
+      🌙 রাতের শেষ আয়না
+    </div>
+
+    <p class="muted-text">
+      আজকের দিনটাকে একবার নিজের সামনে দাঁড় করাও।
+    </p>
+
+    <textarea
+      id="nightReflection"
+      class="text-input"
+      rows="5"
+      placeholder="আজ আমি কোথায় জিতলাম, কোথায় হেরে গেলাম?"
+    ></textarea>
+
+    <button class="primary-btn" onclick="saveToday()">
+      💾 আজকের হিসাব সংরক্ষণ
+    </button>
+
+  </div>
+
 </section>
 
-<section class="box">
-<h2>🕌 আজকের সালাত</h2>
-<div id="pr"></div>
-</section>
 
-<section class="box">
-<h2>🌙 নফল আমল</h2>
-<div id="tasks" class="grid"></div>
-</section>
+  <nav class="bottom-nav">
 
-<section class="box">
-<h2>📿 দৈনিক আমল</h2>
-<div id="amal" class="grid"></div>
-</section>
+  <button class="nav-item active"
+          onclick="openSection('today')">
+    <span>🏠</span>
+    <small>আজ</small>
+  </button>
 
-<section class="box">
-<h2>📱 ফোন ব্যবহারের হিসাব</h2>
-<select id="phone">
-<option value="">নির্বাচন করো</option>
-<option>১ ঘণ্টার কম</option>
-<option>১–৩ ঘণ্টা</option>
-<option>৩–৫ ঘণ্টা</option>
-<option>৫ ঘণ্টার বেশি</option>
-</select>
-</section>
+  <button class="nav-item"
+          onclick="openSection('muhasaba')">
+    <span>🪞</span>
+    <small>মুহাসাবা</small>
+  </button>
 
-<section class="box">
-<h2>📚 কুরআন অগ্রগতি</h2>
+  <button class="nav-item"
+          onclick="openSection('ayah')">
+    <span>📖</span>
+    <small>আয়াত</small>
+  </button>
 
-<label>আজ কত পৃষ্ঠা পড়েছি?</label>
-<input id="pages" type="number" min="0">
+  <button class="nav-item"
+          onclick="openSection('days')">
+    <span>📚</span>
+    <small>আমার দিনগুলো</small>
+  </button>
 
-<br><br>
+  <button class="nav-item"
+          onclick="openSection('path')">
+    <span>👤</span>
+    <small>আমার পথ</small>
+  </button>
 
-<label>আজ কী মুখস্থ/পুনরাবৃত্তি করেছি?</label>
-<input id="memorized">
-</section>
+</nav>
 
-<section class="box">
-<h2>🪞 আজকের আত্মমুহাসাবা</h2>
+<section id="muhasaba" class="page-section">
 
-<label>আজকের বিজয়</label>
-<textarea id="win" placeholder="আজ কোথায় ভালো করতে পেরেছি?"></textarea>
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">নিজের হিসাব</span>
+      <h2>মুহাসাবা</h2>
+    </div>
+  </div>
 
-<label>আজকের পরাজয়</label>
-<textarea id="loss" placeholder="কোথায় নিজের নফসের কাছে হেরেছি?"></textarea>
+  <div class="welcome-card">
 
-<label>আগামীকালের অঙ্গীকার</label>
-<textarea id="promise" placeholder="একটি বাস্তব অঙ্গীকার..."></textarea>
+    <div class="welcome-icon">🪞</div>
 
-<label>আয়নায় যা দেখলাম</label>
-<textarea id="mirror" placeholder="আজ নিজের অন্তরে কী দেখলাম?"></textarea>
-</section>
+    <div>
+      <h3>নিজের সামনে নিজেকে দাঁড় করাও</h3>
+      <p>
+        অন্যের ভুল খুঁজে পাওয়ার আগে
+        নিজের অন্তর, আমল, সময় ও আচরণের
+        হিসাব নাও।
+      </p>
+    </div>
 
-<section class="box">
-<h2>📊 আজকের আত্মসমীক্ষা</h2>
+  </div>
 
-<div id="score" class="score">0%</div>
+  <div class="card">
 
-<div class="bar">
-<div id="fill" class="fill"></div>
-</div>
+    <div class="card-label">
+      🕌 ইবাদত ও নামাজ
+    </div>
 
-<p id="compare" class="muted center"></p>
-</section>
+    <div class="feature-grid">
 
-<section class="box">
-<h2>📈 সাপ্তাহিক আত্মসমীক্ষা</h2>
+      <button class="feature-btn">
+        <strong>🕌 নামাজের হিসাব</strong>
+        <span>আজকের পাঁচ ওয়াক্ত</span>
+      </button>
 
-<div class="grid">
+      <button class="feature-btn">
+        <strong>🤲 জামাআতের হিসাব</strong>
+        <span>কত ওয়াক্ত জামাআতে</span>
+      </button>
 
-<div class="item center">
-<b id="avg">0%</b><br>
-গড় স্কোর
-</div>
+      <button class="feature-btn">
+        <strong>⏳ কাযা নামাজ</strong>
+        <span>বাদ পড়া নামাজের হিসাব</span>
+      </button>
 
-<div class="item center">
-<b id="days">0</b><br>
-রেকর্ড করা দিন
-</div>
+      <button class="feature-btn">
+        <strong>🌙 তাহাজ্জুদ</strong>
+        <span>রাতের ইবাদতের হিসাব</span>
+      </button>
 
-<div class="item center">
-<b id="qd">0</b><br>
-কুরআন পড়া দিন
-</div>
+    </div>
 
-</div>
+  </div>
 
-<div id="wm" class="lesson"></div>
-</section>
+  
+      <div class="card">
 
-<section class="box">
-<h2>📜 আয়াতের ইতিহাস</h2>
-<div id="ah"></div>
-</section>
+      <div class="card-label">
+        📖 কুরআন • 📿 যিকির • 🤲 দোয়া
+      </div>
 
-<section class="box">
-<h2>📜 আত্মমুহাসাবার ইতিহাস</h2>
-<div id="hist"></div>
-</section>
+      <div class="feature-grid">
 
-<section class="box">
-<div class="btns">
+        <button class="feature-btn">
+          <strong>📖 কুরআন</strong>
+          <span>আজ কতটুকু পড়েছি</span>
+        </button>
 
-<button onclick="save()">
-💾 আজকের হিসাব সংরক্ষণ
-</button>
+        <button class="feature-btn">
+          <strong>📿 যিকির</strong>
+          <span>আজকের যিকিরের হিসাব</span>
+        </button>
 
-<button class="dark" onclick="scrollTo({top:0,behavior:'smooth'})">
-↑ উপরে
-</button>
+        <button class="feature-btn">
+          <strong>🤲 দোয়া</strong>
+          <span>আজকের দোয়ার হিসাব</span>
+        </button>
 
-<button class="red" onclick="resetDay()">
-আজকের হিসাব মুছে দাও
-</button>
+      </div>
 
-</div>
-</section>
+    </div>
 
-<footer>
-আত্ম প্রতিবিম্ব — আয়নায় উন্মোচিত অন্তর<br>
-নিজের হিসাব নিজেই নাও, হিসাব নেওয়ার আগেই
-</footer>
 
-</div>
+    <div class="card">
 
+      <div class="card-label">
+        🫀 অন্তর ও নফস
+      </div>
+
+      <div class="feature-grid">
+
+        <button class="feature-btn">
+          <strong>🪞 নফসের হিসাব</strong>
+          <span>আজ নফসকে কোথায় অনুসরণ করেছি</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>💚 ঈমানের অবস্থা</strong>
+          <span>আজ ঈমান কেমন ছিল</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>🎯 নিয়তের হিসাব</strong>
+          <span>কাজের পেছনের উদ্দেশ্য</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>⚠️ ভুল ও গুনাহ</strong>
+          <span>আজকের ভুলগুলো লিখে রাখো</span>
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-label">
+        🌱 তওবা ও অন্তরের পরিবর্তন
+      </div>
+
+      <div class="feature-grid">
+
+        <button class="feature-btn">
+          <strong>↩️ তওবা ও প্রত্যাবর্তন</strong>
+          <span>ভুল থেকে ফিরে আসার হিসাব</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>🌿 শোকর</strong>
+          <span>আজ কোন নিয়ামতের জন্য কৃতজ্ঞ</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>🪨 সবর</strong>
+          <span>আজ কোথায় ধৈর্য ধরেছি</span>
+        </button>
+
+      </div>
+
+    </div>
+
+
+      <div class="card">
+
+      <div class="card-label">
+        ⏰ সময় ও অভ্যাস
+      </div>
+
+      <div class="feature-grid">
+
+        <button class="feature-btn">
+          <strong>📱 ফোন ব্যবহার</strong>
+          <span>আজ কতক্ষণ ফোনে ছিলে</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>⏱️ Screen Time</strong>
+          <span>অ্যাপভিত্তিক সময়ের হিসাব</span>
+        </button>
+
+        <button class="feature-btn">
+          <
+
+                <div class="card">
+
+      <div class="card-label">
+        🔍 ভুল থেকে শেখা
+      </div>
+
+      <div class="feature-grid">
+
+        <button class="feature-btn">
+          <strong>🔁 পুনরাবৃত্ত ভুল</strong>
+          <span>যে ভুল বারবার ফিরে আসে</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>💡 শেখা বিষয়</strong>
+          <span>আজ কী শিখলাম</span>
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-label">
+        🎯 লক্ষ্য ও অঙ্গীকার
+      </div>
+
+      <div class="feature-grid">
+
+        <button class="feature-btn">
+          <strong>🎯 লক্ষ্য</strong>
+          <span>আজ ও ভবিষ্যতের লক্ষ্য</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>🤝 অঙ্গীকার</strong>
+          <span>নিজের কাছে দেওয়া কথা</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>✍️ নিজের কাছে প্রতিশ্রুতি</strong>
+          <span>নিজেকে দেওয়া প্রতিজ্ঞা</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>📈 অগ্রগতি</strong>
+          <span>কতটা এগিয়েছো</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>🔗 ধারাবাহিকতা</strong>
+          <span>কতদিন ধরে নিয়মিত আছো</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>🔥 Nafs Challenge</strong>
+          <span>নফসের বিরুদ্ধে আজকের লড়াই</span>
+        </button>
+
+      </div>
+
+    </div>
+
+                <div class="card">
+
+      <div class="card-label">
+        🌿 জীবন ও সম্পর্ক
+      </div>
+
+      <div class="feature-grid">
+
+        <button class="feature-btn">
+          <strong>🌱 চরিত্র</strong>
+          <span>আজ আমার আচরণ কেমন ছিল</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>🗣️ কথাবার্তা</strong>
+          <span>আমার কথা কাউকে কষ্ট দিয়েছে কি না</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>😤 রাগ নিয়ন্ত্রণ</strong>
+          <span>রাগের সময় নিজেকে কতটা সামলেছি</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>👁️ দৃষ্টি সংযম</strong>
+          <span>চোখ ও অন্তরকে কতটা সংযত রেখেছি</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>🤝 সম্পর্ক</strong>
+          <span>পরিবার, বন্ধু ও অন্যদের সঙ্গে আচরণ</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>❤️ অন্যকে সাহায্য</strong>
+          <span>আজ কারও উপকার করতে পেরেছি কি না</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>📋 সামগ্রিক হিসাব</strong>
+          <span>আজকের পুরো দিনের মূল্যায়ন</span>
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-label">
+        🪞 আজকের মুহাসাবা
+      </div>
+
+      <p>
+        আজ আমি আল্লাহর জন্য কী করেছি?
+        কোথায় নিজের নফসের কাছে হেরে গেছি?
+        আর আগামীকাল কোন একটি বিষয়
+        আরও ভালো করার চেষ্টা করব?
+      </p>
+
+      <textarea
+        class="text-input"
+        rows="6"
+        placeholder="আজকের মুহাসাবা এখানে লিখো..."
+      ></textarea>
+
+      <button class="primary-btn">
+        💾 মুহাসাবা সংরক্ষণ
+      </button>
+
+    </div>
+
+
+          </section>
+
+              <section id="ayah" class="page-section">
+
+    <div class="section-heading">
+
+      <div>
+        <span class="eyebrow">কুরআনের আলো</span>
+        <h2>আয়াত</h2>
+      </div>
+
+      <button class="icon-btn" onclick="openAddAyah()">
+        ＋
+      </button>
+
+    </div>
+
+
+    <div class="search-box">
+
+      <span>🔎</span>
+
+      <input
+        type="text"
+        id="ayahSearch"
+        placeholder="সূরা বা আয়াত খুঁজুন..."
+        oninput="searchAyahs()"
+      >
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-label">
+        📖 আজকের কুরআনের আলো
+      </div>
+
+      <div id="ayahList" class="ayah-list">
+
+        <div class="ayah-item">
+
+          <h3 id="defaultAyahSurah">
+            সূরা আল-আসর
+          </h3>
+
+          <small id="defaultAyahRef">
+            ১০৩ : ১–৩
+          </small>
+
+          <p id="defaultAyahText">
+            সময়ের শপথ। নিশ্চয় মানুষ ক্ষতির মধ্যে রয়েছে।
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-label">
+        ✦ ৩৬৫ দিনের আয়াত
+      </div>
+
+      <p>
+        প্রতিদিনের জন্য একটি আয়াত,
+        তার অর্থ, ব্যাখ্যা, শিক্ষা,
+        আত্মজিজ্ঞাসা এবং করণীয়—
+        ধীরে ধীরে তোমার নিজের
+        কুরআন-ভিত্তিক আত্মযাত্রা তৈরি হবে।
+      </p>
+
+    </div>
+
+
+    <div
+      id="addAyahModal"
+      class="modal"
+    >
+
+      <div class="modal-box">
+
+        <button
+          class="close-btn"
+          onclick="closeModal('addAyahModal')"
+        >
+          ×
+        </button>
+
+        <h2>
+          নতুন আয়াত যোগ করো
+        </h2>
+
+        <div class="form-group">
+          <label>দিন নম্বর</label>
+          <input
+            type="number"
+            id="ayahDay"
+            placeholder="যেমন: ১"
+            min="1"
+            max="365"
+          >
+        </div>
+
+        <div class="form-group">
+          <label>সূরার নাম</label>
+          <input
+            type="text"
+            id="ayahSurah"
+            placeholder="যেমন: সূরা আল-আসর"
+          >
+        </div>
+
+        <div class="form-group">
+          <label>আয়াত নম্বর</label>
+          <input
+            type="text"
+            id="ayahRef"
+            placeholder="যেমন: ১০৩ : ১–৩"
+          >
+        </div>
+
+        <div class="form-group">
+          <label>আরবি আয়াত</label>
+          <textarea
+            id="ayahArabic"
+            rows="3"
+            placeholder="এখানে আরবি আয়াত লিখো..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>অর্থ</label>
+          <textarea
+            id="ayahMeaning"
+            rows="3"
+            placeholder="আয়াতের অর্থ..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>ব্যাখ্যা</label>
+          <textarea
+            id="ayahExplanation"
+            rows="4"
+            placeholder="আয়াতের ব্যাখ্যা..."
+          ></textarea>
+        </div>
+
+        <button
+          class="primary-btn"
+          onclick="addAyah()"
+        >
+          ＋ আয়াত সংরক্ষণ
+        </button>
+
+      </div>
+
+    </div>
+    <div
+      id="ayahDetailsModal"
+      class="modal"
+    >
+
+      <div class="modal-box">
+
+        <button
+          class="close-btn"
+          onclick="closeModal('ayahDetailsModal')"
+        >
+          ×
+        </button>
+
+        <div class="card-label">
+          📖 আয়াতের বিস্তারিত
+        </div>
+
+        <h2 id="detailSurah">
+          সূরা
+        </h2>
+
+        <div id="detailRef" class="ayah-ref">
+          আয়াত
+        </div>
+
+        <div
+          id="detailArabic"
+          class="arabic"
+        >
+          —
+        </div>
+
+        <div class="divider"></div>
+
+        <h3>অর্থ</h3>
+        <p id="detailMeaning">—</p>
+
+        <h3>ব্যাখ্যা</h3>
+        <p id="detailExplanation">—</p>
+
+        <h3>শিক্ষা</h3>
+        <p id="detailLesson">—</p>
+
+        <h3>আত্মজিজ্ঞাসা</h3>
+        <p id="detailQuestion">—</p>
+
+        <h3>আজকের করণীয়</h3>
+        <p id="detailAction">—</p>
+
+        <button
+          class="primary-btn"
+          onclick="deleteCurrentAyah()"
+        >
+          🗑️ এই আয়াত মুছে দাও
+        </button>
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+  <section
+    id="days"
+    class="page-section"
+  >
+
+    <div class="section-heading">
+
+      <div>
+        <span class="eyebrow">
+          তোমার পথের স্মৃতি
+        </span>
+
+        <h2>
+          আমার দিনগুলো
+        </h2>
+      </div>
+
+    </div>
+
+
+    <div class="welcome-card">
+
+      <div class="welcome-icon">
+        📚
+      </div>
+
+      <div>
+        <h3>
+          ফেলে আসা দিনগুলো দেখো
+        </h3>
+
+        <p>
+          প্রতিটি দিন তোমার
+          আত্মযাত্রার একটি পৃষ্ঠা।
+          এখানে সংরক্ষিত থাকবে
+          তোমার নামাজ, আমল,
+          কুরআন, ফোন ব্যবহার,
+          জয় ও ব্যর্থতার হিসাব।
+        </p>
+      </div>
+
+    </div>
+
+
+    <div
+      id="daysList"
+      class="ayah-list"
+    >
+
+      <div class="empty-state">
+        এখনো কোনো দিনের হিসাব
+        সংরক্ষণ করা হয়নি।
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-label">
+        🪞 দিনের শেষে মনে রেখো
+      </div>
+
+      <p>
+        একটি খারাপ দিন তোমার পুরো
+        যাত্রার পরিচয় নয়।
+        আবার একটি ভালো দিনও
+        আত্মতুষ্টির কারণ নয়।
+        ফিরে আসা, চেষ্টা করা এবং
+        ধারাবাহিক থাকাই পথ।
+      </p>
+
+    </div>
+
+  </section>
+
+
+              <section
+    id="path"
+    class="page-section"
+  >
+
+    <div class="section-heading">
+
+      <div>
+        <span class="eyebrow">
+          পরিবর্তনের পথ
+        </span>
+
+        <h2>
+          আমার পথ
+        </h2>
+      </div>
+
+    </div>
+
+
+    <div class="welcome-card">
+
+      <div class="welcome-icon">
+        🧭
+      </div>
+
+      <div>
+        <h3>
+          কোথা থেকে কোথায়?
+        </h3>
+
+        <p>
+          গতকালের তোমার সঙ্গে
+          আজকের তোমাকে তুলনা করো।
+          অন্য কারও সঙ্গে নয়।
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-label">
+        
+        📊 আমার অগ্রগতি
+      </div>
+
+      <div class="feature-grid">
+
+        <button class="feature-btn">
+          <strong>🗓️ নিয়মিত থাকার দিন</strong>
+          <span id="statDays">০ দিন</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>🕌 নামাজের অগ্রগতি</strong>
+          <span id="statPrayer">
+            হিসাব শুরু হয়নি
+          </span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>📖 কুরআন</strong>
+          <span id="statQuran">০ দিন</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>📱 ফোন ব্যবহার</strong>
+          <span id="statPhone">
+            এখনো হিসাব নেই
+          </span>
+        </button>
+
+      </div>
+
+    </div>
 <script>
 
-const A=[
+const ayahs = [];
 
-[
-"يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَلْتَنظُرْ نَفْسٌ مَّا قَدَّمَتْ لِغَدٍ",
-"হে মুমিনগণ! তোমরা আল্লাহকে ভয় করো এবং প্রত্যেক ব্যক্তি যেন লক্ষ্য করে সে আগামীকালের জন্য কী পাঠিয়েছে।",
-"সূরা আল-হাশর ৫৯:১৮",
-"আজকের কাজটাই আগামীকালের পাথেয়।"
-],
+function openSection(id){
 
-[
-"فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ الْعُسْرِ يُسْرًا",
-"নিশ্চয়ই কষ্টের সাথে স্বস্তি রয়েছে।",
-"সূরা আশ-শরহ ৯৪:৫–৬",
-"কঠিন সময় স্থায়ী নয়।"
-],
+  document.querySelectorAll('.page-section')
+    .forEach(s => s.classList.remove('active'));
 
-[
-"وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ",
-"যে ব্যক্তি আল্লাহর ওপর ভরসা করে, তিনিই তার জন্য যথেষ্ট।",
-"সূরা আত-তালাক ৬৫:৩",
-"চেষ্টা করো, ফলাফল আল্লাহর হাতে ছেড়ে দাও।"
-],
+  const section = document.getElementById(id);
 
-[
-"أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ",
-"জেনে রাখো, আল্লাহর স্মরণেই অন্তরসমূহ প্রশান্ত হয়।",
-"সূরা আর-রাদ ১৩:২৮",
-"অস্থির অন্তরের আশ্রয় তার রবের স্মরণ।"
-],
+  if(section){
+    section.classList.add('active');
+  }
 
-[
-"إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ",
-"আল্লাহ কোনো জাতির অবস্থা পরিবর্তন করেন না, যতক্ষণ না তারা নিজেদের অবস্থা পরিবর্তন করে।",
-"সূরা আর-রাদ ১৩:১১",
-"পরিবর্তনের শুরু নিজের ভেতর থেকে।"
-],
-
-[
-"وَلَا تَيْأَسُوا مِن رَّوْحِ اللَّهِ",
-"আল্লাহর রহমত থেকে নিরাশ হয়ো না।",
-"সূরা ইউসুফ ১২:৮৭",
-"ভুল হলে ফিরে আসো।"
-],
-
-[
-"وَالْعَصْرِ ۝ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ",
-"সময়ের শপথ, নিশ্চয়ই মানুষ ক্ষতির মধ্যে রয়েছে।",
-"সূরা আল-আসর ১০৩:১–২",
-"সময়ের সঙ্গে জীবনও কমে যায়।"
-],
-
-[
-"فَاذْكُرُونِي أَذْكُرْكُمْ",
-"তোমরা আমাকে স্মরণ করো, আমিও তোমাদের স্মরণ করব।",
-"সূরা আল-বাকারা ২:১৫২",
-"আল্লাহর স্মরণে অন্তর একা থাকে না।"
-],
-
-[
-"إِنَّ اللَّهَ مَعَ الصَّابِرِينَ",
-"নিশ্চয়ই আল্লাহ ধৈর্যশীলদের সাথে আছেন।",
-"সূরা আল-বাকারা ২:১৫৩",
-"ধৈর্য মানে সঠিক পথে দৃঢ় থাকা।"
-],
-
-[
-"إِنَّ اللَّهَ يُحِبُّ التَّوَّابِينَ",
-"নিশ্চয়ই আল্লাহ তাওবাকারীদের ভালোবাসেন।",
-"সূরা আল-বাকারা ২:২২২",
-"পাপ তোমার পরিচয় নয়; ফিরে আসাটাই গুরুত্বপূর্ণ।"
-]
-
-];
-
-const P=[
-["f","ফজর"],
-["z","যোহর"],
-["a","আসর"],
-["m","মাগরিব"],
-["i","এশা"]
-];
-
-const T={
-tah:"তাহাজ্জুদ",
-ish:"ইশরাক",
-duha:"দুহা / চাশত",
-awa:"আওয়াবিন",
-naf:"অন্যান্য নফল",
-q:"কুরআন তিলাওয়াত",
-zik:"যিকির / ইস্তিগফার",
-dua:"দোয়া",
-dur:"দরুদ",
-learn:"ইসলামিক কিছু শেখা",
-par:"বাবা-মায়ের হক আদায়",
-avoid:"গুনাহ থেকে বেঁচে থাকা",
-help:"কাউকে উপকার করা"
-};
-
-const key=()=>{
-let d=new Date();
-return d.toISOString().slice(0,10)
-};
-
-const K=key();
-
-const get=k=>
-JSON.parse(localStorage.getItem("atma_"+k)||"{}");
-
-let D=get(K);
-
-function fmt(k){
-let d=new Date(k+"T00:00:00");
-
-return d.toLocaleDateString("bn-BD",{
-year:"numeric",
-month:"long",
-day:"numeric",
-weekday:"long"
-});
-}
-
-function saveData(){
-localStorage.setItem("atma_"+K,JSON.stringify(D));
-}
-
-function idx(k){
-let d=new Date(k+"T00:00:00"),
-s=new Date("2026-01-01T00:00:00"),
-n=Math.floor((d-s)/86400000);
-
-return((n%A.length)+A.length)%A.length;
-}
-
-function drawAyah(){
-
-let x=A[idx(K)];
-
-ad.textContent="আজ — "+fmt(K);
-
-aa.textContent=x[0];
-
-ab.textContent="“"+x[1]+"”";
-
-ar.textContent="— "+x[2];
-
-al.innerHTML="<b>আজকের শিক্ষা:</b> "+x[3];
+  document.querySelectorAll('.nav-item')
+    .forEach(b => b.classList.remove('active'));
 
 }
 
-function draw(){
-
-pr.innerHTML=P.map(x=>`
-
-<div class="prayer">
-
-<b>${x[1]}</b>
-
-<select data-p="${x[0]}">
-
-<option value="">নির্বাচন</option>
-
-<option ${D.p?.[x[0]]=="জামাত"?"selected":""}>
-জামাত
-</option>
-
-<option ${D.p?.[x[0]]=="একা"?"selected":""}>
-একা
-</option>
-
-<option ${D.p?.[x[0]]=="কাযা"?"selected":""}>
-কাযা
-</option>
-
-<option ${D.p?.[x[0]]=="ছুটে গেছে"?"selected":""}>
-ছুটে গেছে
-</option>
-
-</select>
-
-</div>
-
-`).join("");
-
-tasks.innerHTML=Object.entries(T)
-.slice(0,5)
-.map(([k,v])=>`
-
-<label class="item check">
-
-<input type="checkbox"
-data-t="${k}"
-${D.t?.[k]?"checked":""}>
-
-${v}
-
-</label>
-
-`).join("");
-
-amal.innerHTML=Object.entries(T)
-.slice(5)
-.map(([k,v])=>`
-
-<label class="item check">
-
-<input type="checkbox"
-data-t="${k}"
-${D.t?.[k]?"checked":""}>
-
-${v}
-
-</label>
-
-`).join("");
-
-document.querySelectorAll("[data-p]").forEach(e=>
-
-e.onchange=()=>{
-
-D.p=D.p||{};
-
-D.p[e.dataset.p]=e.value;
-
-update();
-
-});
-
-document.querySelectorAll("[data-t]").forEach(e=>
-
-e.onchange=()=>{
-
-D.t=D.t||{};
-
-D.t[e.dataset.t]=e.checked;
-
-update();
-
-});
-
-phone.value=D.phone||"";
-pages.value=D.pages||"";
-memorized.value=D.memorized||"";
-win.value=D.win||"";
-loss.value=D.loss||"";
-promise.value=D.promise||"";
-mirror.value=D.mirror||"";
-
+function closeModal(id){
+  document.getElementById(id)
+    ?.classList.remove('show');
 }
 
-[
-"phone",
-"pages",
-"memorized",
-"win",
-"loss",
-"promise",
-"mirror"
-].forEach(id=>
-
-document.getElementById(id).oninput=()=>{
-
-D[id]=document.getElementById(id).value;
-
-update();
-
-});
-
-function score(d=D){
-
-let n=0;
-
-let t=P.length+Object.keys(T).length;
-
-P.forEach(x=>{
-
-if(
-d.p?.[x[0]]=="জামাত"||
-d.p?.[x[0]]=="একা"
-)n++;
-
-});
-
-Object.keys(T).forEach(k=>{
-
-if(d.t?.[k])n++;
-
-});
-
-return Math.round(n/t*100);
-
+function openAddAyah(){
+  document.getElementById('addAyahModal')
+    ?.classList.add('show');
 }
-
-function update(){
-
-saveData();
-
-let s=score();
-
-document.getElementById("score").textContent=s+"%";
-
-fill.style.width=s+"%";
-
-compare();
-
-history();
-
-weekly();
-
-ayahHistory();
-
-}
-
-function compare(){
-
-let d=new Date();
-
-d.setDate(d.getDate()-1);
-
-let k=d.toISOString().slice(0,10);
-
-let o=localStorage.getItem("atma_"+k);
-
-let c=document.getElementById("compare");
-
-if(!o){
-
-c.textContent=
-"গতকালের হিসাব নেই—আজ থেকেই শুরু হোক।";
-
-return;
-
-}
-
-let x=score(get(k)),
-y=score();
-
-c.textContent=
-y>x
-?`গতকালের চেয়ে ${y-x}% এগিয়ে আছো।`
-:y<x
-?`গতকালের চেয়ে ${x-y}% কম। আগামীকাল আবার চেষ্টা করো।`
-:"আজকের হিসাব গতকালের সমান।";
-
-}
-
-function keys(){
-
-return Object.keys(localStorage)
-
-.filter(k=>
-/^atma_\d{4}-\d\d-\d\d$/.test(k)
-)
-
-.map(k=>k.slice(5))
-.sort()
-.reverse();
-
-}
-
-function history(){
-
-hist.innerHTML=keys().length
-
-?keys().map((k,i)=>{
-
-let d=get(k),
-s=score(d);
-
-return`
-
-<div class="history">
-
-<div class="head"
-onclick="this.nextElementSibling.classList.toggle('open')">
-
-<span>
-
-<b>${fmt(k)}</b>
-
-<small class="muted">
-
-<br>
-
-${(d.mirror||d.win||"কোনো মন্তব্য নেই").slice(0,55)}
-
-</small>
-
-</span>
-
-<b>${s}%</b>
-
-</div>
-
-<div class="detail">
-
-<p>
-<b>🕌 সালাত:</b>
-${P.map(x=>
-x[1]+": "+(d.p?.[x[0]]||"—")
-).join(" • ")}
-</p>
-
-<p>
-<b>📿 আমল:</b>
-${Object.keys(T)
-.filter(x=>d.t?.[x])
-.map(x=>T[x])
-.join(" • ")||"কিছু চিহ্নিত নেই"}
-</p>
-
-<p>
-<b>📱 ফোন:</b>
-${d.phone||"—"}
-</p>
-
-<p>
-<b>📖 কুরআন:</b>
-${d.pages||0} পৃষ্ঠা
-${d.memorized?"— "+d.memorized:""}
-</p>
-
-<p>
-<b>🏆 বিজয়:</b>
-${d.win||"—"}
-</p>
-
-<p>
-<b>⚠️ পরাজয়:</b>
-${d.loss||"—"}
-</p>
-
-<p>
-<b>📝 অঙ্গীকার:</b>
-${d.promise||"—"}
-</p>
-
-<p>
-<b>🪞 আয়নায়:</b>
-${d.mirror||"—"}
-</p>
-
-</div>
-
-</div>
-
-`;
-
-}).join("")
-
-:"<p class='muted'>এখনো কোনো রেকর্ড নেই।";
-
-}
-
-function ayahHistory(){
-
-ah.innerHTML=
-
-keys().map(k=>{
-
-let x=A[idx(k)];
-
-return`
-
-<div class="card">
-
-<span class="muted">
-${fmt(k)}
-</span>
-
-<br>
-
-<b>${x[2]}</b>
-
-<br>
-
-${x[1]}
-
-</div>
-
-`;
-
-}).join("")
-
-||
-
-"<p class='muted'>প্রথম দিনের রেকর্ড সংরক্ষণ হলে এখানে আসবে।";
-
-}
-
-function weekly(){
-
-let a=[],
-q=0;
-
-for(let i=0;i<7;i++){
-
-let d=new Date();
-
-d.setDate(d.getDate()-i);
-
-let k=d.toISOString().slice(0,10);
-
-if(localStorage.getItem("atma_"+k)){
-
-let x=get(k);
-
-a.push(score(x));
-
-if(Number(x.pages)>0||x.t?.q)q++;
-
-}
-
-}
-
-let av=a.length
-?Math.round(a.reduce((x,y)=>x+y,0)/a.length)
-:0;
-
-avg.textContent=av+"%";
-
-days.textContent=a.length;
-
-qd.textContent=q;
-
-wm.textContent=
-
-!a.length
-?"এই সপ্তাহের হিসাব তৈরি হতে রেকর্ড দরকার।"
-
-:av>=80
-?"ধারাবাহিকতা ভালো ছিল। কৃতজ্ঞ থাকো।"
-
-:av>=50
-?"ভালো ও দুর্বল—দুই দিকই আছে। একটি দুর্বল জায়গাকে শক্ত করো।"
-
-:"হিসাব খারাপ হলেও পথ শেষ নয়। আজ থেকেই আবার শুরু করো।";
-
-}
-
-function save(){
-
-update();
-
-alert("আজকের আত্মমুহাসাবা সংরক্ষণ করা হয়েছে।");
-
-}
-
-function resetDay(){
-
-if(confirm("আজকের সব হিসাব মুছে ফেলবে?")){
-
-localStorage.removeItem("atma_"+K);
-
-location.reload();
-
-}
-
-}
-
-drawAyah();
-
-draw();
-
-update();
 
 </script>
+                
+
+
+    <div class="card">
+
+      <div class="card-label">
+        🔁 যে জায়গাগুলোতে কাজ দরকার
+      </div>
+
+      <div class="feature-grid">
+
+        <button class="feature-btn">
+          <strong>⚠️ পুনরাবৃত্ত ভুল</strong>
+          <span id="statMistakes">
+            এখনো তথ্য নেই
+          </span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>🤝 অঙ্গীকার পালন</strong>
+          <span id="statPromises">
+            এখনো তথ্য নেই
+          </span>
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-label">
+        📈 পরিবর্তনের মাইলফলক
+      </div>
+
+      <div class="feature-grid">
+
+        <button class="feature-btn">
+          <strong>🌱 ৭ দিন</strong>
+          <span>ছোট ধারাবাহিকতার শুরু</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>🌿 ৩০ দিন</strong>
+          <span>অভ্যাস গড়ার পথে</span>
+        </button>
+
+        <button class="feature-btn">
+          <strong>🌳 ৯০ দিন</strong>
+          <span>দীর্ঘ পথের পরিবর্তন</span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="profile" class="page-section">
+
+    <div class="section-heading">
+
+      <div>
+        <span class="eyebrow">পরিচয়</span>
+        <h2>আমার প্রোফাইল</h2>
+      </div>
+
+    </div>
+
+
+    <div class="welcome-card">
+
+      <div class="welcome-icon">
+        🪞
+      </div>
+
+      <div>
+        <h3>আত্মপ্রতিবিম্ব</h3>
+        <p>আয়নায় উন্মোচিত অন্তর</p>
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-label">
+        ✍️ নিজের পরিচয়
+      </div>
+
+      <div class="form-group">
+
+        <label>নাম</label>
+
+        <input
+          type="text"
+          id="profileName"
+          placeholder="তোমার নাম"
+        >
+
+      </div>
+
+      <button
+        class="primary-btn"
+        onclick="saveProfile()"
+      >
+        💾 প্রোফাইল সংরক্ষণ
+      </button>
+
+    </div>
+
+  </section>
+
+
+          </main>
+
+            <script>
+
+const ayahs = [];
+
+function openSection(id){
+
+  document.querySelectorAll('.page-section')
+    .forEach(s => s.classList.remove('active'));
+
+  const section = document.getElementById(id);
+
+  if(section){
+    section.classList.add('active');
+  }
+
+  document.querySelectorAll('.nav-item')
+    .forEach(b => b.classList.remove('active'));
+
+}
+
+function closeModal(id){
+  document.getElementById(id)
+    ?.classList.remove('show');
+}
+
+function openAddAyah(){
+  document.getElementById('addAyahModal')
+    ?.classList.add('show');
+}
+
+            </script>
+
+
+
+            function addAyah(){
+
+  const ayah = {
+    day: document.getElementById('ayahDay').value,
+    surah: document.getElementById('ayahSurah').value,
+    ref: document.getElementById('ayahRef').value,
+    arabic: document.getElementById('ayahArabic').value,
+    meaning: document.getElementById('ayahMeaning').value,
+    explanation:
+      document.getElementById('ayahExplanation').value
+  };
+
+  if(!ayah.surah || !ayah.meaning){
+    alert('সূরা ও অর্থ লিখো।');
+    return;
+  }
+
+  ayahs.push(ayah);
+
+  localStorage.setItem(
+    'ayahs',
+    JSON.stringify(ayahs)
+  );
+
+            
+
+  closeModal('addAyahModal');
+
+  alert('আয়াত সংরক্ষণ হয়েছে।');
+}
+
+
+            function searchAyahs(){
+
+  const q = document
+    .getElementById('ayahSearch')
+    .value
+    .toLowerCase();
+
+  const list = document.getElementById('ayahList');
+
+  list.innerHTML = '';
+
+  ayahs
+    .filter(a =>
+      a.surah.toLowerCase().includes(q) ||
+      a.ref.toLowerCase().includes(q) ||
+      a.meaning.toLowerCase().includes(q)
+    )
+    .forEach((a, i) => {
+
+      const card = document.createElement('div');
+
+      card.className = 'ayah-card';
+
+      card.innerHTML = `
+        <h3>📖 ${a.surah}</h3>
+        <small>${a.ref}</small>
+        <p>${a.meaning}</p>
+      `;
+
+      card.onclick = () => {
+        showAyahDetails(i);
+      };
+
+      list.appendChild(card);
+    });
+}
+
+function showAyahDetails(i){
+
+  const a = ayahs[i];
+
+  if(!a) return;
+
+  document.getElementById('detailSurah').textContent = a.surah;
+  document.getElementById('detailRef').textContent = a.ref;
+  document.getElementById('detailArabic').textContent = a.arabic;
+  document.getElementById('detailMeaning').textContent = a.meaning;
+  document.getElementById('detailExplanation').textContent =
+    a.explanation || 'ব্যাখ্যা এখনো যোগ করা হয়নি।';
+
+  document.getElementById('ayahDetailsModal')
+    ?.classList.add('show');
+}
+            
+function loadAyahs(){
+
+  const saved =
+    localStorage.getItem('ayahs');
+
+  if(!saved) return;
+
+  const data = JSON.parse(saved);
+
+  data.forEach(a => ayahs.push(a));
+
+  searchAyahs();
+}
+
+loadAyahs();
+
+            
+
+            function setTodayDate(){
+
+  const el =
+    document.getElementById('todayDate');
+
+  if(!el) return;
+
+  const days = [
+    'রবিবার',
+    'সোমবার',
+    'মঙ্গলবার',
+    'বুধবার',
+    'বৃহস্পতিবার',
+    'শুক্রবার',
+    'শনিবার'
+  ];
+
+  const d = new Date();
+
+  el.textContent =
+    `${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()} • ${days[d.getDay()]}`;
+}
+
+setTodayDate();
+
+            function saveToday(){
+
+  const today = {
+    tahajjud:
+      document.getElementById('amalTahajjud').checked,
+
+    quran:
+      document.getElementById('amalQuran').checked,
+
+    dhikr:
+      document.getElementById('amalDhikr').checked,
+
+    dua:
+      document.getElementById('amalDua').checked,
+
+    challenge:
+      document.getElementById('nafsChallengeDone').checked,
+
+    reflection:
+      document.getElementById('nightReflection').value
+  };
+
+  const key =
+    'today_' + new Date().toISOString().slice(0,10);
+
+  localStorage.setItem(
+    key,
+    JSON.stringify(today)
+  );
+
+  alert('আজকের হিসাব সংরক্ষণ হয়েছে।');
+}
+function deleteCurrentAyah(){
+
+  if(ayahs.length === 0){
+    alert('ডিলেট করার মতো কোনো আয়াত নেই।');
+    return;
+  }
+
+  const ok = confirm(
+    'এই আয়াতটি মুছে ফেলতে চাও?'
+  );
+
+  if(!ok) return;
+
+  ayahs.pop();
+
+  localStorage.setItem(
+    'ayahs',
+    JSON.stringify(ayahs)
+  );
+
+  searchAyahs();
+
+  closeModal('ayahDetailsModal');
+}
+
+            
+            function saveNightReflection(){
+
+  const text =
+    document.getElementById('nightReflection').value;
+
+  const key =
+    'reflection_' +
+    new Date().toISOString().slice(0,10);
+
+  localStorage.setItem(key, text);
+
+  alert('রাতের আত্মমুহাসাবা সংরক্ষণ হয়েছে।');
+}
+
+            
+            </script>
 
 </body>
-  </html>
+          </html>
+            
+  
+  
