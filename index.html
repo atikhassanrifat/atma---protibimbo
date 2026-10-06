@@ -2,882 +2,765 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>আত্ম প্রতিবিম্ব — দৈনিক আত্মমুহাসাবা</title>
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>আত্ম প্রতিবিম্ব — আয়নায় উন্মোচিত অন্তর</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap');
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-body{
-  font-family:'Noto Sans Bengali',sans-serif;
-  background:#070b09;
-  color:#e8eee9;
-  line-height:1.7;
-}
-
-.container{
-  width:min(900px,94%);
-  margin:auto;
-}
-
-header{
-  padding:55px 0 35px;
-  text-align:center;
-}
-
-.logo{
-  width:75px;
-  height:75px;
-  margin:auto;
-  border:1px solid #b69b5a;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:34px;
-  color:#b69b5a;
-  box-shadow:0 0 30px rgba(182,155,90,.08);
-}
-
-h1{
-  margin-top:18px;
-  font-size:34px;
-  color:#d5bc7a;
-}
-
-.subtitle{
-  color:#87958c;
-  margin-top:5px;
-}
-
-.date{
-  margin-top:15px;
-  color:#65736b;
-  font-size:14px;
-}
-
-.ayah{
-  margin:20px 0;
-  padding:28px 22px;
-  background:linear-gradient(145deg,#101914,#0b100d);
-  border:1px solid #26382e;
-  border-radius:18px;
-  text-align:center;
-}
-
-.arabic{
-  direction:rtl;
-  font-size:25px;
-  line-height:2;
-  color:#d8c58f;
-  margin-bottom:15px;
-}
-
-.translation{
-  color:#aab5ae;
-  font-size:14px;
-}
-
-.section{
-  background:#0d1410;
-  border:1px solid #1d2a23;
-  border-radius:18px;
-  padding:22px;
-  margin:18px 0;
-}
-
-.section-title{
-  color:#c8b16f;
-  font-size:20px;
-  margin-bottom:15px;
-}
-
-.prayer{
-  padding:15px 0;
-  border-bottom:1px solid #1c2821;
-}
-
-.prayer:last-child{
-  border-bottom:0;
-}
-
-.prayer-name{
-  font-weight:600;
-  margin-bottom:9px;
-}
-
-.options{
-  display:flex;
-  flex-wrap:wrap;
-  gap:7px;
-}
-
-button{
-  font-family:inherit;
-  cursor:pointer;
-}
-
-.option{
-  border:1px solid #2a3a31;
-  background:#111a15;
-  color:#91a098;
-  padding:7px 11px;
-  border-radius:9px;
-  font-size:13px;
-}
-
-.option.active{
-  background:#244b37;
-  color:#e7f1e9;
-  border-color:#477b5b;
-}
-
-.negative.active{
-  background:#4a2727;
-  border-color:#784747;
-}
-
-.nofol-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-  gap:10px;
-}
-
-.nofol{
-  background:#111a15;
-  border:1px solid #26372d;
-  border-radius:12px;
-  padding:13px;
-}
-
-.nofol label{
-  display:block;
-  margin-bottom:7px;
-  font-size:14px;
-}
-
-input[type="checkbox"]{
-  width:18px;
-  height:18px;
-  accent-color:#668c70;
-}
-
-.tasks label{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:10px 0;
-  border-bottom:1px solid #19251e;
-}
-
-.tasks label:last-child{
-  border-bottom:0;
-}
-
-.progress-wrap{
-  margin-top:15px;
-}
-
-.progress{
-  height:10px;
-  background:#172019;
-  border-radius:20px;
-  overflow:hidden;
-}
-
-.progress-bar{
-  height:100%;
-  width:0%;
-  background:linear-gradient(90deg,#466b50,#b69b5a);
-  transition:.4s;
-}
-
-.score{
-  text-align:center;
-  font-size:32px;
-  color:#d5bc7a;
-  margin:8px;
-}
-
-textarea{
-  width:100%;
-  min-height:110px;
-  resize:vertical;
-  background:#090e0b;
-  color:#dce5df;
-  border:1px solid #26372d;
-  border-radius:12px;
-  padding:13px;
-  font-family:inherit;
-  outline:none;
-}
-
-textarea:focus{
-  border-color:#52735d;
-}
-
-.compare{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-}
-
-.compare-box{
-  background:#101811;
-  border:1px solid #25362c;
-  padding:18px;
-  border-radius:14px;
-  text-align:center;
-}
-
-.compare-number{
-  font-size:28px;
-  color:#d5bc7a;
-}
-
-.save{
-  width:100%;
-  border:0;
-  border-radius:13px;
-  padding:14px;
-  background:#31583e;
-  color:white;
-  font-size:16px;
-  margin-top:12px;
-}
-
-.reset{
-  width:100%;
-  border:1px solid #452727;
-  border-radius:13px;
-  padding:11px;
-  background:#17100f;
-  color:#bd8989;
-  font-size:14px;
-  margin-top:8px;
-}
-
-footer{
-  text-align:center;
-  padding:40px 0 55px;
-  color:#59665f;
-  font-size:13px;
-}
-
-.quote{
-  color:#8d9a92;
-  font-style:italic;
-  margin-top:8px;
-}
-
-@media(max-width:500px){
-  h1{font-size:28px}
-  .arabic{font-size:21px}
-  .section{padding:17px}
-}
+*{box-sizing:border-box}
+body{margin:0;background:#050a08;color:#eee;font-family:"Noto Sans Bengali",sans-serif;line-height:1.7}
+.wrap{max-width:850px;width:92%;margin:auto;padding:25px 0 60px}
+header{text-align:center;padding:25px 0}
+.logo{width:105px;height:105px;border:2px solid #b99a50;border-radius:50%;overflow:hidden;margin:auto}
+.logo img{width:100%;height:100%;object-fit:cover}
+h1{color:#d5b766;margin:15px 0 0}.tag{color:#999}
+.box{background:#0b1511;border:1px solid #20392e;border-radius:15px;padding:18px;margin:16px 0}
+.box h2{color:#d5b766;font-size:20px;margin:0 0 13px}
+.arabic{text-align:center;direction:rtl;font-size:25px;color:#e4d39b}
+.center{text-align:center}.muted{color:#999;font-size:14px}
+.lesson{background:#07100c;border-left:3px solid #b99a50;padding:12px;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.item{padding:10px;background:#07100c;border-radius:9px}
+.prayer{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #17251f}
+.prayer:last-child{border:0}
+select,input,textarea{width:100%;background:#07100c;color:#eee;border:1px solid #294638;border-radius:8px;padding:9px;font:inherit}
+textarea{min-height:80px;resize:vertical}
+input[type=checkbox]{width:auto;accent-color:#b99a50}
+.check{display:flex;gap:8px;align-items:center}
+.score{text-align:center;font-size:42px;color:#d5b766}
+.bar{height:9px;background:#18251f;border-radius:20px;overflow:hidden}
+.fill{height:100%;width:0;background:#b99a50}
+.btns{display:flex;flex-wrap:wrap;gap:9px}
+button{padding:10px 15px;border:0;border-radius:8px;font:inherit;background:#b99a50;color:#08100c}
+button.dark{background:#182a22;color:#eee;border:1px solid #315044}
+button.red{background:#391b1b;color:#eee}
+.history{border:1px solid #1e352b;border-radius:10px;margin:8px 0;overflow:hidden}
+.head{padding:12px;display:flex;justify-content:space-between;cursor:pointer}
+.detail{display:none;border-top:1px solid #1e352b;padding:12px;color:#bbb}
+.detail.open{display:block}
+.card{background:#07100c;border-radius:9px;padding:11px;margin:8px 0}
+footer{text-align:center;color:#666;margin-top:30px}
 </style>
 </head>
 
 <body>
-
-<div class="container">
+<div class="wrap">
 
 <header>
-  <div class="logo">م</div>
-  <h1>আত্ম প্রতিবিম্ব</h1>
-  <div class="subtitle">আজ নিজের অন্তরের সামনে দাঁড়ানোর দিন।</div>
-  <div class="date" id="today"></div>
+<div class="logo">
+<img src="profile.png" alt="আয়নার সামনে দাঁড়ানো মানুষ">
+</div>
+
+<h1>আত্ম প্রতিবিম্ব</h1>
+<div class="tag">আয়নায় উন্মোচিত অন্তর</div>
+
+<div class="box">
+আজ নিজের অন্তরের সামনে দাঁড়ানোর দিন।<br>
+মানুষের চোখে নয়—নিজের রবের সামনে কেমন ছিলাম?
+</div>
 </header>
 
-<section class="ayah">
-  <div class="arabic">
-    يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَلْتَنظُرْ نَفْسٌ مَّا قَدَّمَتْ لِغَدٍ ۖ وَاتَّقُوا اللَّهَ ۚ إِنَّ اللَّهَ خَبِيرٌ بِمَا تَعْمَلُونَ
-  </div>
-
-  <div class="translation">
-    “হে মুমিনগণ! তোমরা আল্লাহকে ভয় করো এবং প্রত্যেক ব্যক্তি যেন লক্ষ্য করে সে আগামীকালের জন্য কী পাঠিয়েছে।”
-    <br>
-    — সূরা আল-হাশর ৫৯:১৮
-  </div>
+<section class="box">
+<h2>📖 আজকের আয়াত</h2>
+<div id="ad" class="muted center"></div>
+<p id="aa" class="arabic"></p>
+<p id="ab" class="center"></p>
+<p id="ar" class="muted center"></p>
+<div id="al" class="lesson"></div>
 </section>
 
-
-<section class="section">
-  <div class="section-title">🕌 আজকের নামাজ</div>
-
-  <div id="prayers"></div>
+<section class="box">
+<h2>🕌 আজকের সালাত</h2>
+<div id="pr"></div>
 </section>
 
-
-<section class="section">
-  <div class="section-title">🌙 নফল নামাজ</div>
-
-  <div class="nofol-grid">
-
-    <div class="nofol">
-      <label>
-        <input type="checkbox" data-task="tahajjud">
-        তাহাজ্জুদ
-      </label>
-    </div>
-
-    <div class="nofol">
-      <label>
-        <input type="checkbox" data-task="ishraq">
-        ইশরাক
-      </label>
-    </div>
-
-    <div class="nofol">
-      <label>
-        <input type="checkbox" data-task="duha">
-        দুহা / চাশত
-      </label>
-    </div>
-
-    <div class="nofol">
-      <label>
-        <input type="checkbox" data-task="awabin">
-        আওয়াবিন
-      </label>
-    </div>
-
-    <div class="nofol">
-      <label>
-        <input type="checkbox" data-task="otherNafl">
-        অন্যান্য নফল
-      </label>
-    </div>
-
-  </div>
+<section class="box">
+<h2>🌙 নফল আমল</h2>
+<div id="tasks" class="grid"></div>
 </section>
 
-
-<section class="section">
-  <div class="section-title">📿 আজকের আমল</div>
-
-  <div class="tasks">
-
-    <label>
-      <input type="checkbox" data-task="quran">
-      কুরআন তিলাওয়াত করেছি
-    </label>
-
-    <label>
-      <input type="checkbox" data-task="zikr">
-      যিকির / ইস্তিগফার করেছি
-    </label>
-
-    <label>
-      <input type="checkbox" data-task="durood">
-      দরুদ পড়েছি
-    </label>
-
-    <label>
-      <input type="checkbox" data-task="dua">
-      মনোযোগ দিয়ে দোয়া করেছি
-    </label>
-
-    <label>
-      <input type="checkbox" data-task="learning">
-      ইসলাম সম্পর্কে কিছু শিখেছি
-    </label>
-
-    <label>
-      <input type="checkbox" data-task="parents">
-      বাবা-মায়ের প্রতি দায়িত্ব পালন করেছি
-    </label>
-
-    <label>
-      <input type="checkbox" data-task="sin">
-      ইচ্ছাকৃতভাবে কোনো গুনাহ থেকে নিজেকে বাঁচিয়েছি
-    </label>
-
-    <label>
-      <input type="checkbox" data-task="help">
-      কাউকে উপকার করেছি
-    </label>
-
-  </div>
+<section class="box">
+<h2>📿 দৈনিক আমল</h2>
+<div id="amal" class="grid"></div>
 </section>
 
-
-<section class="section">
-  <div class="section-title">📊 আজকের আমলনামা</div>
-
-  <div class="score">
-    <span id="score">0</span>%
-  </div>
-
-  <div class="progress-wrap">
-    <div class="progress">
-      <div class="progress-bar" id="progress"></div>
-    </div>
-  </div>
-
-  <p style="text-align:center;color:#7f8c84;margin-top:8px">
-    লক্ষ্য নিখুঁত হওয়া নয়—গতকালের চেয়ে আজ একটু ভালো হওয়া।
-  </p>
+<section class="box">
+<h2>📱 ফোন ব্যবহারের হিসাব</h2>
+<select id="phone">
+<option value="">নির্বাচন করো</option>
+<option>১ ঘণ্টার কম</option>
+<option>১–৩ ঘণ্টা</option>
+<option>৩–৫ ঘণ্টা</option>
+<option>৫ ঘণ্টার বেশি</option>
+</select>
 </section>
 
+<section class="box">
+<h2>📚 কুরআন অগ্রগতি</h2>
 
-<section class="section">
-  <div class="section-title">🪞 গতকালের সঙ্গে আজকের তুলনা</div>
+<label>আজ কত পৃষ্ঠা পড়েছি?</label>
+<input id="pages" type="number" min="0">
 
-  <div class="compare">
+<br><br>
 
-    <div class="compare-box">
-      <div>গতকাল</div>
-      <div class="compare-number" id="yesterdayScore">—</div>
-    </div>
-
-    <div class="compare-box">
-      <div>আজ</div>
-      <div class="compare-number" id="todayScore">0%</div>
-    </div>
-
-  </div>
-
-  <p id="comparisonText"
-     style="text-align:center;margin-top:15px;color:#8f9b94">
-  আজকের হিসাব পূরণ করলে তুলনা দেখা যাবে।
-  </p>
+<label>আজ কী মুখস্থ/পুনরাবৃত্তি করেছি?</label>
+<input id="memorized">
 </section>
 
+<section class="box">
+<h2>🪞 আজকের আত্মমুহাসাবা</h2>
 
-<section class="section">
-  <div class="section-title">🖤 আত্মমুহাসাবা</div>
+<label>আজকের বিজয়</label>
+<textarea id="win" placeholder="আজ কোথায় ভালো করতে পেরেছি?"></textarea>
 
-  <p style="color:#7f8c84;margin-bottom:8px">
-    আজ আমি কোথায় নিজেকে জয় করেছি?
-  </p>
+<label>আজকের পরাজয়</label>
+<textarea id="loss" placeholder="কোথায় নিজের নফসের কাছে হেরেছি?"></textarea>
 
-  <textarea id="win"
-  placeholder="আজকের ছোট কোনো বিজয় লিখে রাখো..."></textarea>
+<label>আগামীকালের অঙ্গীকার</label>
+<textarea id="promise" placeholder="একটি বাস্তব অঙ্গীকার..."></textarea>
 
-  <p style="color:#7f8c84;margin:15px 0 8px">
-    কোথায় নিজের কাছে হেরে গেছি?
-  </p>
-
-  <textarea id="mistake"
-  placeholder="নিজেকে দোষারোপ নয়—সত্যটা লিখে রাখো..."></textarea>
-
-  <p style="color:#7f8c84;margin:15px 0 8px">
-    আগামীকাল আমার একটি অঙ্গীকার
-  </p>
-
-  <textarea id="promise"
-  placeholder="আগামীকাল আমি কোন একটি বিষয় অবশ্যই ভালো করব?"></textarea>
-
+<label>আয়নায় যা দেখলাম</label>
+<textarea id="mirror" placeholder="আজ নিজের অন্তরে কী দেখলাম?"></textarea>
 </section>
 
+<section class="box">
+<h2>📊 আজকের আত্মসমীক্ষা</h2>
 
-<section class="section">
-  <div class="section-title">📱 সময়ের হিসাব</div>
+<div id="score" class="score">0%</div>
 
-  <p style="color:#7f8c84;margin-bottom:10px">
-    আজ ফোনে অপ্রয়োজনীয় সময় কেমন গেছে?
-  </p>
+<div class="bar">
+<div id="fill" class="fill"></div>
+</div>
 
-  <div class="options" id="phoneOptions">
-
-    <button class="option" data-phone="কম">কম</button>
-    <button class="option" data-phone="মাঝারি">মাঝারি</button>
-    <button class="option" data-phone="বেশি">বেশি</button>
-    <button class="option negative" data-phone="অতিরিক্ত">অতিরিক্ত</button>
-
-  </div>
+<p id="compare" class="muted center"></p>
 </section>
 
+<section class="box">
+<h2>📈 সাপ্তাহিক আত্মসমীক্ষা</h2>
 
-<button class="save" onclick="saveDay()">
-  💾 আজকের আত্মমুহাসাবা সংরক্ষণ
+<div class="grid">
+
+<div class="item center">
+<b id="avg">0%</b><br>
+গড় স্কোর
+</div>
+
+<div class="item center">
+<b id="days">0</b><br>
+রেকর্ড করা দিন
+</div>
+
+<div class="item center">
+<b id="qd">0</b><br>
+কুরআন পড়া দিন
+</div>
+
+</div>
+
+<div id="wm" class="lesson"></div>
+</section>
+
+<section class="box">
+<h2>📜 আয়াতের ইতিহাস</h2>
+<div id="ah"></div>
+</section>
+
+<section class="box">
+<h2>📜 আত্মমুহাসাবার ইতিহাস</h2>
+<div id="hist"></div>
+</section>
+
+<section class="box">
+<div class="btns">
+
+<button onclick="save()">
+💾 আজকের হিসাব সংরক্ষণ
 </button>
 
-<button class="reset" onclick="resetToday()">
-  আজকের হিসাব নতুন করে শুরু
+<button class="dark" onclick="scrollTo({top:0,behavior:'smooth'})">
+↑ উপরে
 </button>
 
+<button class="red" onclick="resetDay()">
+আজকের হিসাব মুছে দাও
+</button>
+
+</div>
+</section>
 
 <footer>
-  <div>আত্ম প্রতিবিম্ব</div>
-  <div class="quote">
-    “মানুষের চোখে নয়—নিজের রবের সামনে কেমন ছিলাম?”
-  </div>
+আত্ম প্রতিবিম্ব — আয়নায় উন্মোচিত অন্তর<br>
+নিজের হিসাব নিজেই নাও, হিসাব নেওয়ার আগেই
 </footer>
 
 </div>
 
-
 <script>
 
-const prayers = [
-  {id:"fajr", name:"ফজর"},
-  {id:"dhuhr", name:"যোহর"},
-  {id:"asr", name:"আসর"},
-  {id:"maghrib", name:"মাগরিব"},
-  {id:"isha", name:"এশা"}
+const A=[
+
+[
+"يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَلْتَنظُرْ نَفْسٌ مَّا قَدَّمَتْ لِغَدٍ",
+"হে মুমিনগণ! তোমরা আল্লাহকে ভয় করো এবং প্রত্যেক ব্যক্তি যেন লক্ষ্য করে সে আগামীকালের জন্য কী পাঠিয়েছে।",
+"সূরা আল-হাশর ৫৯:১৮",
+"আজকের কাজটাই আগামীকালের পাথেয়।"
+],
+
+[
+"فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ الْعُسْرِ يُسْرًا",
+"নিশ্চয়ই কষ্টের সাথে স্বস্তি রয়েছে।",
+"সূরা আশ-শরহ ৯৪:৫–৬",
+"কঠিন সময় স্থায়ী নয়।"
+],
+
+[
+"وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ",
+"যে ব্যক্তি আল্লাহর ওপর ভরসা করে, তিনিই তার জন্য যথেষ্ট।",
+"সূরা আত-তালাক ৬৫:৩",
+"চেষ্টা করো, ফলাফল আল্লাহর হাতে ছেড়ে দাও।"
+],
+
+[
+"أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ",
+"জেনে রাখো, আল্লাহর স্মরণেই অন্তরসমূহ প্রশান্ত হয়।",
+"সূরা আর-রাদ ১৩:২৮",
+"অস্থির অন্তরের আশ্রয় তার রবের স্মরণ।"
+],
+
+[
+"إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ",
+"আল্লাহ কোনো জাতির অবস্থা পরিবর্তন করেন না, যতক্ষণ না তারা নিজেদের অবস্থা পরিবর্তন করে।",
+"সূরা আর-রাদ ১৩:১১",
+"পরিবর্তনের শুরু নিজের ভেতর থেকে।"
+],
+
+[
+"وَلَا تَيْأَسُوا مِن رَّوْحِ اللَّهِ",
+"আল্লাহর রহমত থেকে নিরাশ হয়ো না।",
+"সূরা ইউসুফ ১২:৮৭",
+"ভুল হলে ফিরে আসো।"
+],
+
+[
+"وَالْعَصْرِ ۝ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ",
+"সময়ের শপথ, নিশ্চয়ই মানুষ ক্ষতির মধ্যে রয়েছে।",
+"সূরা আল-আসর ১০৩:১–২",
+"সময়ের সঙ্গে জীবনও কমে যায়।"
+],
+
+[
+"فَاذْكُرُونِي أَذْكُرْكُمْ",
+"তোমরা আমাকে স্মরণ করো, আমিও তোমাদের স্মরণ করব।",
+"সূরা আল-বাকারা ২:১৫২",
+"আল্লাহর স্মরণে অন্তর একা থাকে না।"
+],
+
+[
+"إِنَّ اللَّهَ مَعَ الصَّابِرِينَ",
+"নিশ্চয়ই আল্লাহ ধৈর্যশীলদের সাথে আছেন।",
+"সূরা আল-বাকারা ২:১৫৩",
+"ধৈর্য মানে সঠিক পথে দৃঢ় থাকা।"
+],
+
+[
+"إِنَّ اللَّهَ يُحِبُّ التَّوَّابِينَ",
+"নিশ্চয়ই আল্লাহ তাওবাকারীদের ভালোবাসেন।",
+"সূরা আল-বাকারা ২:২২২",
+"পাপ তোমার পরিচয় নয়; ফিরে আসাটাই গুরুত্বপূর্ণ।"
+]
+
 ];
 
-const todayKey =
-  new Date().toISOString().slice(0,10);
+const P=[
+["f","ফজর"],
+["z","যোহর"],
+["a","আসর"],
+["m","মাগরিব"],
+["i","এশা"]
+];
 
-let data =
-  JSON.parse(localStorage.getItem("atma_"+todayKey) || "{}");
+const T={
+tah:"তাহাজ্জুদ",
+ish:"ইশরাক",
+duha:"দুহা / চাশত",
+awa:"আওয়াবিন",
+naf:"অন্যান্য নফল",
+q:"কুরআন তিলাওয়াত",
+zik:"যিকির / ইস্তিগফার",
+dua:"দোয়া",
+dur:"দরুদ",
+learn:"ইসলামিক কিছু শেখা",
+par:"বাবা-মায়ের হক আদায়",
+avoid:"গুনাহ থেকে বেঁচে থাকা",
+help:"কাউকে উপকার করা"
+};
 
+const key=()=>{
+let d=new Date();
+return d.toISOString().slice(0,10)
+};
 
-function showDate(){
+const K=key();
 
-  const d = new Date();
+const get=k=>
+JSON.parse(localStorage.getItem("atma_"+k)||"{}");
 
-  const days =
-  ["রবিবার","সোমবার","মঙ্গলবার","বুধবার",
-   "বৃহস্পতিবার","শুক্রবার","শনিবার"];
+let D=get(K);
 
-  document.getElementById("today").innerText =
-    days[d.getDay()] + " • " +
-    d.toLocaleDateString("bn-BD");
+function fmt(k){
+let d=new Date(k+"T00:00:00");
+
+return d.toLocaleDateString("bn-BD",{
+year:"numeric",
+month:"long",
+day:"numeric",
+weekday:"long"
+});
+}
+
+function saveData(){
+localStorage.setItem("atma_"+K,JSON.stringify(D));
+}
+
+function idx(k){
+let d=new Date(k+"T00:00:00"),
+s=new Date("2026-01-01T00:00:00"),
+n=Math.floor((d-s)/86400000);
+
+return((n%A.length)+A.length)%A.length;
+}
+
+function drawAyah(){
+
+let x=A[idx(K)];
+
+ad.textContent="আজ — "+fmt(K);
+
+aa.textContent=x[0];
+
+ab.textContent="“"+x[1]+"”";
+
+ar.textContent="— "+x[2];
+
+al.innerHTML="<b>আজকের শিক্ষা:</b> "+x[3];
 
 }
 
+function draw(){
 
-function buildPrayers(){
+pr.innerHTML=P.map(x=>`
 
-  const box =
-  document.getElementById("prayers");
+<div class="prayer">
 
-  box.innerHTML="";
+<b>${x[1]}</b>
 
-  prayers.forEach(p=>{
+<select data-p="${x[0]}">
 
-    const value =
-      data[p.id] || "";
+<option value="">নির্বাচন</option>
 
-    const div =
-      document.createElement("div");
+<option ${D.p?.[x[0]]=="জামাত"?"selected":""}>
+জামাত
+</option>
 
-    div.className="prayer";
+<option ${D.p?.[x[0]]=="একা"?"selected":""}>
+একা
+</option>
 
-    div.innerHTML = `
-      <div class="prayer-name">${p.name}</div>
+<option ${D.p?.[x[0]]=="কাযা"?"selected":""}>
+কাযা
+</option>
 
-      <div class="options">
+<option ${D.p?.[x[0]]=="ছুটে গেছে"?"selected":""}>
+ছুটে গেছে
+</option>
 
-        <button class="option ${value==="জামাত"?"active":""}"
-          onclick="setPrayer('${p.id}','জামাত',this)">
-          জামাত
-        </button>
+</select>
 
-        <button class="option ${value==="একা"?"active":""}"
-          onclick="setPrayer('${p.id}','একা',this)">
-          একা
-        </button>
+</div>
 
-        <button class="option ${value==="কাযা"?"active":""}"
-          onclick="setPrayer('${p.id}','কাযা',this)">
-          কাযা
-        </button>
+`).join("");
 
-        <button class="option negative ${value==="ছুটে গেছে"?"active":""}"
-          onclick="setPrayer('${p.id}','ছুটে গেছে',this)">
-          ছুটে গেছে
-        </button>
+tasks.innerHTML=Object.entries(T)
+.slice(0,5)
+.map(([k,v])=>`
 
-      </div>
-    `;
+<label class="item check">
 
-    box.appendChild(div);
+<input type="checkbox"
+data-t="${k}"
+${D.t?.[k]?"checked":""}>
 
-  });
+${v}
 
-}
+</label>
 
+`).join("");
 
-function setPrayer(id,value,button){
+amal.innerHTML=Object.entries(T)
+.slice(5)
+.map(([k,v])=>`
 
-  data[id]=value;
+<label class="item check">
 
-  button.parentElement
-    .querySelectorAll(".option")
-    .forEach(b=>b.classList.remove("active"));
+<input type="checkbox"
+data-t="${k}"
+${D.t?.[k]?"checked":""}>
 
-  button.classList.add("active");
+${v}
 
-  update();
+</label>
 
-}
+`).join("");
 
+document.querySelectorAll("[data-p]").forEach(e=>
 
-document.querySelectorAll("[data-task]")
-.forEach(el=>{
+e.onchange=()=>{
 
-  const key=el.dataset.task;
+D.p=D.p||{};
 
-  el.checked =
-    data[key] === true;
+D.p[e.dataset.p]=e.value;
 
-  el.addEventListener("change",()=>{
-
-    data[key]=el.checked;
-
-    update();
-
-  });
+update();
 
 });
 
+document.querySelectorAll("[data-t]").forEach(e=>
 
-document.querySelectorAll("[data-phone]")
-.forEach(btn=>{
+e.onchange=()=>{
 
-  if(data.phone===btn.dataset.phone)
-    btn.classList.add("active");
+D.t=D.t||{};
 
-  btn.addEventListener("click",()=>{
+D.t[e.dataset.t]=e.checked;
 
-    data.phone=btn.dataset.phone;
-
-    document.querySelectorAll("[data-phone]")
-      .forEach(b=>b.classList.remove("active"));
-
-    btn.classList.add("active");
-
-    saveLocal();
-
-  });
+update();
 
 });
 
-
-["win","mistake","promise"]
-.forEach(id=>{
-
-  const el=document.getElementById(id);
-
-  el.value=data[id] || "";
-
-  el.addEventListener("input",()=>{
-
-    data[id]=el.value;
-
-    saveLocal();
-
-  });
-
-});
-
-
-function calculateScore(){
-
-  let total=0;
-  let done=0;
-
-  prayers.forEach(p=>{
-
-    total++;
-
-    if(
-      data[p.id]==="জামাত" ||
-      data[p.id]==="একা"
-    ){
-      done++;
-    }
-
-  });
-
-
-  document
-  .querySelectorAll("[data-task]")
-  .forEach(el=>{
-
-    total++;
-
-    if(el.checked)
-      done++;
-
-  });
-
-
-  if(total===0) return 0;
-
-  return Math.round((done/total)*100);
+phone.value=D.phone||"";
+pages.value=D.pages||"";
+memorized.value=D.memorized||"";
+win.value=D.win||"";
+loss.value=D.loss||"";
+promise.value=D.promise||"";
+mirror.value=D.mirror||"";
 
 }
 
+[
+"phone",
+"pages",
+"memorized",
+"win",
+"loss",
+"promise",
+"mirror"
+].forEach(id=>
+
+document.getElementById(id).oninput=()=>{
+
+D[id]=document.getElementById(id).value;
+
+update();
+
+});
+
+function score(d=D){
+
+let n=0;
+
+let t=P.length+Object.keys(T).length;
+
+P.forEach(x=>{
+
+if(
+d.p?.[x[0]]=="জামাত"||
+d.p?.[x[0]]=="একা"
+)n++;
+
+});
+
+Object.keys(T).forEach(k=>{
+
+if(d.t?.[k])n++;
+
+});
+
+return Math.round(n/t*100);
+
+}
 
 function update(){
 
-  const score =
-    calculateScore();
+saveData();
 
-  document.getElementById("score")
-    .innerText=score;
+let s=score();
 
-  document.getElementById("todayScore")
-    .innerText=score+"%";
+document.getElementById("score").textContent=s+"%";
 
-  document.getElementById("progress")
-    .style.width=score+"%";
+fill.style.width=s+"%";
 
-  saveLocal();
+compare();
 
-  showComparison(score);
+history();
 
-}
+weekly();
 
-
-function saveLocal(){
-
-  localStorage.setItem(
-    "atma_"+todayKey,
-    JSON.stringify(data)
-  );
+ayahHistory();
 
 }
 
+function compare(){
 
-function saveDay(){
+let d=new Date();
 
-  saveLocal();
+d.setDate(d.getDate()-1);
 
-  alert(
-    "আজকের আত্মমুহাসাবা সংরক্ষণ হয়েছে।"
-  );
+let k=d.toISOString().slice(0,10);
 
-}
+let o=localStorage.getItem("atma_"+k);
 
+let c=document.getElementById("compare");
 
-function showComparison(todayScore){
+if(!o){
 
-  const d=new Date();
+c.textContent=
+"গতকালের হিসাব নেই—আজ থেকেই শুরু হোক।";
 
-  d.setDate(d.getDate()-1);
-
-  const yesterdayKey =
-    d.toISOString().slice(0,10);
-
-  const yesterday =
-    JSON.parse(
-      localStorage.getItem(
-        "atma_"+yesterdayKey
-      ) || "{}"
-    );
-
-  if(!Object.keys(yesterday).length){
-
-    document.getElementById("yesterdayScore")
-      .innerText="—";
-
-    document.getElementById("comparisonText")
-      .innerText=
-      "গতকালের হিসাব পাওয়া যায়নি। আজ থেকেই নিজের সঙ্গে নিজের তুলনা শুরু হোক।";
-
-    return;
-
-  }
-
-
-  let total=0;
-  let done=0;
-
-
-  prayers.forEach(p=>{
-
-    total++;
-
-    if(
-      yesterday[p.id]==="জামাত" ||
-      yesterday[p.id]==="একা"
-    )
-      done++;
-
-  });
-
-
-  Object.keys(yesterday).forEach(key=>{
-
-    if(
-      !["fajr","dhuhr","asr","maghrib","isha",
-        "win","mistake","promise","phone"]
-      .includes(key)
-    ){
-
-      total++;
-
-      if(yesterday[key]===true)
-        done++;
-
-    }
-
-  });
-
-
-  const yesterdayScore =
-    total ?
-    Math.round(done/total*100) :
-    0;
-
-
-  document.getElementById("yesterdayScore")
-    .innerText=yesterdayScore+"%";
-
-
-  const difference =
-    todayScore-yesterdayScore;
-
-
-  let message="";
-
-  if(difference>0){
-
-    message=
-      "আলহামদুলিল্লাহ—গতকালের চেয়ে আজ তুমি এক ধাপ এগিয়েছো।";
-
-  }else if(difference<0){
-
-    message=
-      "আজ একটু পিছিয়ে পড়েছো—কিন্তু আগামীকাল আবার দাঁড়ানোর সুযোগ আছে।";
-
-  }else{
-
-    message=
-      "আজ আর গতকাল একই জায়গায়—এবার নিজের সীমাটা একটু উঁচু করো।";
-
-  }
-
-
-  document.getElementById("comparisonText")
-    .innerText=message;
+return;
 
 }
 
+let x=score(get(k)),
+y=score();
 
-function resetToday(){
-
-  if(!confirm(
-    "আজকের সব হিসাব মুছে ফেলবে?"
-  )) return;
-
-  localStorage.removeItem(
-    "atma_"+todayKey
-  );
-
-  location.reload();
+c.textContent=
+y>x
+?`গতকালের চেয়ে ${y-x}% এগিয়ে আছো।`
+:y<x
+?`গতকালের চেয়ে ${x-y}% কম। আগামীকাল আবার চেষ্টা করো।`
+:"আজকের হিসাব গতকালের সমান।";
 
 }
 
+function keys(){
 
-showDate();
-buildPrayers();
+return Object.keys(localStorage)
+
+.filter(k=>
+/^atma_\d{4}-\d\d-\d\d$/.test(k)
+)
+
+.map(k=>k.slice(5))
+.sort()
+.reverse();
+
+}
+
+function history(){
+
+hist.innerHTML=keys().length
+
+?keys().map((k,i)=>{
+
+let d=get(k),
+s=score(d);
+
+return`
+
+<div class="history">
+
+<div class="head"
+onclick="this.nextElementSibling.classList.toggle('open')">
+
+<span>
+
+<b>${fmt(k)}</b>
+
+<small class="muted">
+
+<br>
+
+${(d.mirror||d.win||"কোনো মন্তব্য নেই").slice(0,55)}
+
+</small>
+
+</span>
+
+<b>${s}%</b>
+
+</div>
+
+<div class="detail">
+
+<p>
+<b>🕌 সালাত:</b>
+${P.map(x=>
+x[1]+": "+(d.p?.[x[0]]||"—")
+).join(" • ")}
+</p>
+
+<p>
+<b>📿 আমল:</b>
+${Object.keys(T)
+.filter(x=>d.t?.[x])
+.map(x=>T[x])
+.join(" • ")||"কিছু চিহ্নিত নেই"}
+</p>
+
+<p>
+<b>📱 ফোন:</b>
+${d.phone||"—"}
+</p>
+
+<p>
+<b>📖 কুরআন:</b>
+${d.pages||0} পৃষ্ঠা
+${d.memorized?"— "+d.memorized:""}
+</p>
+
+<p>
+<b>🏆 বিজয়:</b>
+${d.win||"—"}
+</p>
+
+<p>
+<b>⚠️ পরাজয়:</b>
+${d.loss||"—"}
+</p>
+
+<p>
+<b>📝 অঙ্গীকার:</b>
+${d.promise||"—"}
+</p>
+
+<p>
+<b>🪞 আয়নায়:</b>
+${d.mirror||"—"}
+</p>
+
+</div>
+
+</div>
+
+`;
+
+}).join("")
+
+:"<p class='muted'>এখনো কোনো রেকর্ড নেই।";
+
+}
+
+function ayahHistory(){
+
+ah.innerHTML=
+
+keys().map(k=>{
+
+let x=A[idx(k)];
+
+return`
+
+<div class="card">
+
+<span class="muted">
+${fmt(k)}
+</span>
+
+<br>
+
+<b>${x[2]}</b>
+
+<br>
+
+${x[1]}
+
+</div>
+
+`;
+
+}).join("")
+
+||
+
+"<p class='muted'>প্রথম দিনের রেকর্ড সংরক্ষণ হলে এখানে আসবে।";
+
+}
+
+function weekly(){
+
+let a=[],
+q=0;
+
+for(let i=0;i<7;i++){
+
+let d=new Date();
+
+d.setDate(d.getDate()-i);
+
+let k=d.toISOString().slice(0,10);
+
+if(localStorage.getItem("atma_"+k)){
+
+let x=get(k);
+
+a.push(score(x));
+
+if(Number(x.pages)>0||x.t?.q)q++;
+
+}
+
+}
+
+let av=a.length
+?Math.round(a.reduce((x,y)=>x+y,0)/a.length)
+:0;
+
+avg.textContent=av+"%";
+
+days.textContent=a.length;
+
+qd.textContent=q;
+
+wm.textContent=
+
+!a.length
+?"এই সপ্তাহের হিসাব তৈরি হতে রেকর্ড দরকার।"
+
+:av>=80
+?"ধারাবাহিকতা ভালো ছিল। কৃতজ্ঞ থাকো।"
+
+:av>=50
+?"ভালো ও দুর্বল—দুই দিকই আছে। একটি দুর্বল জায়গাকে শক্ত করো।"
+
+:"হিসাব খারাপ হলেও পথ শেষ নয়। আজ থেকেই আবার শুরু করো।";
+
+}
+
+function save(){
+
+update();
+
+alert("আজকের আত্মমুহাসাবা সংরক্ষণ করা হয়েছে।");
+
+}
+
+function resetDay(){
+
+if(confirm("আজকের সব হিসাব মুছে ফেলবে?")){
+
+localStorage.removeItem("atma_"+K);
+
+location.reload();
+
+}
+
+}
+
+drawAyah();
+
+draw();
+
 update();
 
 </script>
 
 </body>
-        </html>
+  </html>
